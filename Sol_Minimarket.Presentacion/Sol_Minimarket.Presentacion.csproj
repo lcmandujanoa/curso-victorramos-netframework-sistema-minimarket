@@ -161,6 +161,18 @@
     <Compile Include="Reportes\Frm_Rpt_Marcas.Designer.cs">
       <DependentUpon>Frm_Rpt_Marcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Productos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Proveedores.Designer.cs">
+      <DependentUpon>Frm_Rpt_Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Frm_Rpt_Provincias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +246,12 @@
     <EmbeddedResource Include="Reportes\Frm_Rpt_Marcas.resx">
       <DependentUpon>Frm_Rpt_Marcas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Productos.resx">
+      <DependentUpon>Frm_Rpt_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Proveedores.resx">
+      <DependentUpon>Frm_Rpt_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Frm_Rpt_Provincias.resx">
       <DependentUpon>Frm_Rpt_Provincias.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +266,8 @@
     <EmbeddedResource Include="Reportes\Rpt_Departamentos.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Distritos.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Marcas.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Productos.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Proveedores.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Provincias.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Rubros.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Unidades_Medidas.rdlc" />

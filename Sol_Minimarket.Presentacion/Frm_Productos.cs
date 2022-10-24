@@ -382,9 +382,9 @@ namespace Sol_Minimarket.Presentacion
 
         private void Btn_reporte_Click(object sender, EventArgs e)
         {
-            //Reportes.Frm_Rpt_Almacenes oRpta4 = new Reportes.Frm_Rpt_Almacenes();
-            //oRpta4.txt_p1.Text = Txt_buscar.Text;
-            //oRpta4.ShowDialog();
+            Reportes.Frm_Rpt_Productos oRpta10 = new Reportes.Frm_Rpt_Productos();
+            oRpta10.txt_p1.Text = Txt_buscar.Text;
+            oRpta10.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)

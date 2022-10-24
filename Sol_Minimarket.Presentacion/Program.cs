@@ -16,7 +16,7 @@ namespace Sol_Minimarket.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Distritos());
+            Application.Run(new Frm_Productos());
         }
     }
 }

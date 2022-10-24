@@ -49,7 +49,7 @@ namespace Sol_Minimarket.Datos
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion;
                 Comando.Parameters.Add("@nCodigo_pv", SqlDbType.Int).Value = oPv.Codigo_pv;
-                Comando.Parameters.Add("@Codigo_tdpc", SqlDbType.Int).Value = oPv.Codigo_tdpc;
+                Comando.Parameters.Add("@nCodigo_tdpc", SqlDbType.Int).Value = oPv.Codigo_tdpc;
                 Comando.Parameters.Add("@cNrodocumento_pv", SqlDbType.VarChar).Value = oPv.Nrodocumento_pv;
                 Comando.Parameters.Add("@cRazon_social_pv", SqlDbType.VarChar).Value = oPv.Razon_social_pv;
                 Comando.Parameters.Add("@cNombres", SqlDbType.VarChar).Value = oPv.Nombres;
@@ -161,7 +161,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("Listado_ru_pv", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_ru_pv", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -188,7 +188,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("Listado_di_pv", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_di_pv", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
