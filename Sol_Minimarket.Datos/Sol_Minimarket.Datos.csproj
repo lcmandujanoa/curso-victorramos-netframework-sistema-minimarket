@@ -44,8 +44,13 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="D_Almacenes.cs" />
     <Compile Include="D_Categorias.cs" />
+    <Compile Include="D_Departamentos.cs" />
+    <Compile Include="D_Distritos.cs" />
     <Compile Include="D_Marcas.cs" />
     <Compile Include="D_Productos.cs" />
+    <Compile Include="D_Proveedores.cs" />
+    <Compile Include="D_Provincias.cs" />
+    <Compile Include="D_Rubros.cs" />
     <Compile Include="D_Unidades_Medida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

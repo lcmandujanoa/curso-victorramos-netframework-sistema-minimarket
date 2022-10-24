@@ -1,6 +1,6 @@
 ﻿namespace Sol_Minimarket.Presentacion
 {
-    partial class Frm_Marcas
+    partial class Frm_Departamentos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Marcas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Departamentos));
             this.Tbc_principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
@@ -42,7 +42,7 @@
             this.Btn_retornar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_cancelar = new System.Windows.Forms.Button();
-            this.Txt_descripcion_ma = new System.Windows.Forms.TextBox();
+            this.Txt_descripcion_de = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_nuevo = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -141,7 +141,7 @@
             this.tabPage2.Controls.Add(this.Btn_retornar);
             this.tabPage2.Controls.Add(this.Btn_guardar);
             this.tabPage2.Controls.Add(this.Btn_cancelar);
-            this.tabPage2.Controls.Add(this.Txt_descripcion_ma);
+            this.tabPage2.Controls.Add(this.Txt_descripcion_de);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -193,23 +193,23 @@
             this.Btn_cancelar.Visible = false;
             this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
-            // Txt_descripcion_ma
+            // Txt_descripcion_de
             // 
-            this.Txt_descripcion_ma.Location = new System.Drawing.Point(103, 71);
-            this.Txt_descripcion_ma.MaxLength = 40;
-            this.Txt_descripcion_ma.Name = "Txt_descripcion_ma";
-            this.Txt_descripcion_ma.ReadOnly = true;
-            this.Txt_descripcion_ma.Size = new System.Drawing.Size(212, 20);
-            this.Txt_descripcion_ma.TabIndex = 1;
+            this.Txt_descripcion_de.Location = new System.Drawing.Point(103, 71);
+            this.Txt_descripcion_de.MaxLength = 100;
+            this.Txt_descripcion_de.Name = "Txt_descripcion_de";
+            this.Txt_descripcion_de.ReadOnly = true;
+            this.Txt_descripcion_de.Size = new System.Drawing.Size(212, 20);
+            this.Txt_descripcion_de.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 74);
+            this.label1.Location = new System.Drawing.Point(7, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Marca: (*)";
+            this.label1.Text = "Departamento: (*)";
             // 
             // Btn_nuevo
             // 
@@ -296,7 +296,7 @@
             this.Btn_salir.UseVisualStyleBackColor = false;
             this.Btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
-            // Frm_Marcas
+            // Frm_Departamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,9 +308,9 @@
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_nuevo);
             this.Controls.Add(this.Tbc_principal);
-            this.Name = "Frm_Marcas";
-            this.Text = "MARCAS";
-            this.Load += new System.EventHandler(this.Frm_Marcas_Load);
+            this.Name = "Frm_Departamentos";
+            this.Text = "DEPARTAMENTOS";
+            this.Load += new System.EventHandler(this.Frm_Departamentos_Load);
             this.Tbc_principal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -337,7 +337,7 @@
         private System.Windows.Forms.Button Btn_salir;
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_cancelar;
-        private System.Windows.Forms.TextBox Txt_descripcion_ma;
+        private System.Windows.Forms.TextBox Txt_descripcion_de;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_retornar;
         private System.Windows.Forms.ImageList imageList1;

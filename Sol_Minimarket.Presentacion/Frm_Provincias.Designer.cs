@@ -1,6 +1,6 @@
 ﻿namespace Sol_Minimarket.Presentacion
 {
-    partial class Frm_Marcas
+    partial class Frm_Provincias
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Marcas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Provincias));
             this.Tbc_principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
@@ -39,10 +41,20 @@
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Pnl_Listado_de = new System.Windows.Forms.Panel();
+            this.Btn_retornar1 = new System.Windows.Forms.Button();
+            this.Btn_buscar1 = new System.Windows.Forms.Button();
+            this.Txt_buscar1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Dgv_departamentos = new System.Windows.Forms.DataGridView();
+            this.Btn_lupa1 = new System.Windows.Forms.Button();
+            this.Txt_descripcion_de = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.Btn_retornar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_cancelar = new System.Windows.Forms.Button();
-            this.Txt_descripcion_ma = new System.Windows.Forms.TextBox();
+            this.Txt_descripcion_po = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_nuevo = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -50,10 +62,13 @@
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_reporte = new System.Windows.Forms.Button();
             this.Btn_salir = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.Tbc_principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.Pnl_Listado_de.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_departamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // Tbc_principal
@@ -103,7 +118,7 @@
             this.Dgv_principal.Name = "Dgv_principal";
             this.Dgv_principal.ReadOnly = true;
             this.Dgv_principal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_principal.Size = new System.Drawing.Size(441, 130);
+            this.Dgv_principal.Size = new System.Drawing.Size(664, 165);
             this.Dgv_principal.TabIndex = 7;
             this.Dgv_principal.DoubleClick += new System.EventHandler(this.Dgv_principal_DoubleClick);
             // 
@@ -138,10 +153,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Pnl_Listado_de);
+            this.tabPage2.Controls.Add(this.Btn_lupa1);
+            this.tabPage2.Controls.Add(this.Txt_descripcion_de);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.Btn_retornar);
             this.tabPage2.Controls.Add(this.Btn_guardar);
             this.tabPage2.Controls.Add(this.Btn_cancelar);
-            this.tabPage2.Controls.Add(this.Txt_descripcion_ma);
+            this.tabPage2.Controls.Add(this.Txt_descripcion_po);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -151,12 +170,130 @@
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // Pnl_Listado_de
+            // 
+            this.Pnl_Listado_de.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(154)))));
+            this.Pnl_Listado_de.Controls.Add(this.Btn_retornar1);
+            this.Pnl_Listado_de.Controls.Add(this.Btn_buscar1);
+            this.Pnl_Listado_de.Controls.Add(this.Txt_buscar1);
+            this.Pnl_Listado_de.Controls.Add(this.label9);
+            this.Pnl_Listado_de.Controls.Add(this.label8);
+            this.Pnl_Listado_de.Controls.Add(this.Dgv_departamentos);
+            this.Pnl_Listado_de.Location = new System.Drawing.Point(388, 6);
+            this.Pnl_Listado_de.Name = "Pnl_Listado_de";
+            this.Pnl_Listado_de.Size = new System.Drawing.Size(297, 220);
+            this.Pnl_Listado_de.TabIndex = 19;
+            this.Pnl_Listado_de.Visible = false;
+            // 
+            // Btn_retornar1
+            // 
+            this.Btn_retornar1.ImageKey = "retornar.png";
+            this.Btn_retornar1.ImageList = this.imageList2;
+            this.Btn_retornar1.Location = new System.Drawing.Point(250, 55);
+            this.Btn_retornar1.Name = "Btn_retornar1";
+            this.Btn_retornar1.Size = new System.Drawing.Size(30, 23);
+            this.Btn_retornar1.TabIndex = 24;
+            this.Btn_retornar1.UseVisualStyleBackColor = true;
+            this.Btn_retornar1.Click += new System.EventHandler(this.Btn_retornar1_Click);
+            // 
+            // Btn_buscar1
+            // 
+            this.Btn_buscar1.ImageKey = "lupa.png";
+            this.Btn_buscar1.ImageList = this.imageList2;
+            this.Btn_buscar1.Location = new System.Drawing.Point(214, 55);
+            this.Btn_buscar1.Name = "Btn_buscar1";
+            this.Btn_buscar1.Size = new System.Drawing.Size(30, 23);
+            this.Btn_buscar1.TabIndex = 19;
+            this.Btn_buscar1.UseVisualStyleBackColor = true;
+            this.Btn_buscar1.Click += new System.EventHandler(this.Btn_buscar1_Click);
+            // 
+            // Txt_buscar1
+            // 
+            this.Txt_buscar1.Location = new System.Drawing.Point(59, 55);
+            this.Txt_buscar1.Name = "Txt_buscar1";
+            this.Txt_buscar1.Size = new System.Drawing.Size(149, 20);
+            this.Txt_buscar1.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Buscar:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(195, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "LISTADO DE DEPARTAMENTOS";
+            // 
+            // Dgv_departamentos
+            // 
+            this.Dgv_departamentos.AllowUserToAddRows = false;
+            this.Dgv_departamentos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_departamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_departamentos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.Dgv_departamentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_departamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.Dgv_departamentos.ColumnHeadersHeight = 35;
+            this.Dgv_departamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgv_departamentos.EnableHeadersVisualStyles = false;
+            this.Dgv_departamentos.Location = new System.Drawing.Point(12, 91);
+            this.Dgv_departamentos.Name = "Dgv_departamentos";
+            this.Dgv_departamentos.ReadOnly = true;
+            this.Dgv_departamentos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Dgv_departamentos.Size = new System.Drawing.Size(268, 119);
+            this.Dgv_departamentos.TabIndex = 20;
+            this.Dgv_departamentos.DoubleClick += new System.EventHandler(this.Dgv_departamentos_DoubleClick);
+            // 
+            // Btn_lupa1
+            // 
+            this.Btn_lupa1.ImageKey = "lupa.png";
+            this.Btn_lupa1.ImageList = this.imageList2;
+            this.Btn_lupa1.Location = new System.Drawing.Point(317, 35);
+            this.Btn_lupa1.Name = "Btn_lupa1";
+            this.Btn_lupa1.Size = new System.Drawing.Size(30, 23);
+            this.Btn_lupa1.TabIndex = 10;
+            this.Btn_lupa1.UseVisualStyleBackColor = true;
+            this.Btn_lupa1.Click += new System.EventHandler(this.Btn_lupa1_Click);
+            // 
+            // Txt_descripcion_de
+            // 
+            this.Txt_descripcion_de.Location = new System.Drawing.Point(103, 35);
+            this.Txt_descripcion_de.Name = "Txt_descripcion_de";
+            this.Txt_descripcion_de.ReadOnly = true;
+            this.Txt_descripcion_de.Size = new System.Drawing.Size(208, 20);
+            this.Txt_descripcion_de.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Departamento: (*)";
+            // 
             // Btn_retornar
             // 
             this.Btn_retornar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.Btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar.ForeColor = System.Drawing.Color.White;
-            this.Btn_retornar.Location = new System.Drawing.Point(283, 106);
+            this.Btn_retornar.Location = new System.Drawing.Point(283, 124);
             this.Btn_retornar.Name = "Btn_retornar";
             this.Btn_retornar.Size = new System.Drawing.Size(76, 26);
             this.Btn_retornar.TabIndex = 4;
@@ -170,7 +307,7 @@
             this.Btn_guardar.BackColor = System.Drawing.Color.SteelBlue;
             this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.Btn_guardar.Location = new System.Drawing.Point(202, 106);
+            this.Btn_guardar.Location = new System.Drawing.Point(202, 124);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(76, 26);
             this.Btn_guardar.TabIndex = 3;
@@ -184,7 +321,7 @@
             this.Btn_cancelar.BackColor = System.Drawing.Color.LightCoral;
             this.Btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.Btn_cancelar.Location = new System.Drawing.Point(121, 106);
+            this.Btn_cancelar.Location = new System.Drawing.Point(121, 124);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(76, 26);
             this.Btn_cancelar.TabIndex = 2;
@@ -193,23 +330,23 @@
             this.Btn_cancelar.Visible = false;
             this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
-            // Txt_descripcion_ma
+            // Txt_descripcion_po
             // 
-            this.Txt_descripcion_ma.Location = new System.Drawing.Point(103, 71);
-            this.Txt_descripcion_ma.MaxLength = 40;
-            this.Txt_descripcion_ma.Name = "Txt_descripcion_ma";
-            this.Txt_descripcion_ma.ReadOnly = true;
-            this.Txt_descripcion_ma.Size = new System.Drawing.Size(212, 20);
-            this.Txt_descripcion_ma.TabIndex = 1;
+            this.Txt_descripcion_po.Location = new System.Drawing.Point(103, 71);
+            this.Txt_descripcion_po.MaxLength = 100;
+            this.Txt_descripcion_po.Name = "Txt_descripcion_po";
+            this.Txt_descripcion_po.ReadOnly = true;
+            this.Txt_descripcion_po.Size = new System.Drawing.Size(212, 20);
+            this.Txt_descripcion_po.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 74);
+            this.label1.Location = new System.Drawing.Point(33, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Marca: (*)";
+            this.label1.Text = "Provincia:(*)";
             // 
             // Btn_nuevo
             // 
@@ -296,7 +433,14 @@
             this.Btn_salir.UseVisualStyleBackColor = false;
             this.Btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
-            // Frm_Marcas
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "lupa.png");
+            this.imageList2.Images.SetKeyName(1, "retornar.png");
+            // 
+            // Frm_Provincias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,15 +452,18 @@
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_nuevo);
             this.Controls.Add(this.Tbc_principal);
-            this.Name = "Frm_Marcas";
-            this.Text = "MARCAS";
-            this.Load += new System.EventHandler(this.Frm_Marcas_Load);
+            this.Name = "Frm_Provincias";
+            this.Text = "PROVINCIAS";
+            this.Load += new System.EventHandler(this.Frm_Provincias_Load);
             this.Tbc_principal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.Pnl_Listado_de.ResumeLayout(false);
+            this.Pnl_Listado_de.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_departamentos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,9 +484,20 @@
         private System.Windows.Forms.Button Btn_salir;
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_cancelar;
-        private System.Windows.Forms.TextBox Txt_descripcion_ma;
+        private System.Windows.Forms.TextBox Txt_descripcion_po;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_retornar;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button Btn_lupa1;
+        private System.Windows.Forms.TextBox Txt_descripcion_de;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel Pnl_Listado_de;
+        private System.Windows.Forms.Button Btn_retornar1;
+        private System.Windows.Forms.Button Btn_buscar1;
+        private System.Windows.Forms.TextBox Txt_buscar1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView Dgv_departamentos;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }
