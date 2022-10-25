@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Sol_Minimarket.Datos
 {
-    public class D_Entrada_Productos
+    public class D_Salida_Productos
     {
-        public DataTable Listado_ep(string cTexto)
+        public DataTable Listado_sp(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -20,7 +20,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_sp", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -38,7 +38,7 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_detalle_ep(int nCodigo_ep)
+        public DataTable Listado_detalle_sp(int nCodigo_sp)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -47,9 +47,9 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_Detalle_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_Detalle_sp", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@nCodigo_ep", SqlDbType.Int).Value = nCodigo_ep;
+                Comando.Parameters.Add("@nCodigo_sp", SqlDbType.Int).Value = nCodigo_sp;
                 SQLCon.Open();
                 Resultado = Comando.ExecuteReader();
                 Tabla.Load(Resultado);
@@ -65,26 +65,27 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public string Guardar_ep(E_Entrada_Productos oEp, DataTable dTabla)
+        public string Guardar_sp(E_Salida_Productos oSp, DataTable dTabla)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Guardar_ep", SqlCon);
-                Comando.CommandType = CommandType.StoredProcedure;                
-                Comando.Parameters.Add("@nCodigo_tde", SqlDbType.Int).Value = oEp.Codigo_tde;
-                Comando.Parameters.Add("@cNrodocumento_ep", SqlDbType.VarChar).Value = oEp.Nrodocumento_ep;
-                Comando.Parameters.Add("@nCodigo_pv", SqlDbType.Int).Value = oEp.Codigo_pv;
-                Comando.Parameters.Add("@fFecha_ep", SqlDbType.Date).Value = oEp.Fecha_ep;
-                Comando.Parameters.Add("@nCodigo_al", SqlDbType.Int).Value = oEp.Codigo_al;
-                Comando.Parameters.Add("@cObservacion_ep", SqlDbType.Text).Value = oEp.Observacion_ep;
-                Comando.Parameters.Add("@nSubtotal", SqlDbType.Decimal).Value = oEp.Subtotal;
-                Comando.Parameters.Add("@nIgv", SqlDbType.Decimal).Value = oEp.Igv;
-                Comando.Parameters.Add("@nTotal_importe", SqlDbType.Decimal).Value = oEp.Total_importe;
+                SqlCommand Comando = new SqlCommand("USP_Guardar_sp", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@nCodigo_tde", SqlDbType.Int).Value = oSp.Codigo_tde;
+                Comando.Parameters.Add("@cNrodocumento_sp", SqlDbType.VarChar).Value = oSp.Nrodocumento_sp;
+                Comando.Parameters.Add("@nCodigo_cl", SqlDbType.Int).Value = oSp.Codigo_cl;
+                Comando.Parameters.Add("@cNrodocumento_cl", SqlDbType.VarChar).Value = oSp.Nrodocumento_cl;
+                Comando.Parameters.Add("@cRazon_social_cl", SqlDbType.VarChar).Value = oSp.Razon_social_cl;
+                Comando.Parameters.Add("@fFecha_sp", SqlDbType.Date).Value = oSp.Fecha_sp;
+                Comando.Parameters.Add("@cObservacion_sp", SqlDbType.Text).Value = oSp.Observacion_sp;
+                Comando.Parameters.Add("@nSubtotal", SqlDbType.Decimal).Value = oSp.Subtotal;
+                Comando.Parameters.Add("@nIgv", SqlDbType.Decimal).Value = oSp.Igv;
+                Comando.Parameters.Add("@nTotal_importe", SqlDbType.Decimal).Value = oSp.Total_importe;
                 Comando.Parameters.Add("@tDetalle", SqlDbType.Structured).Value = dTabla;
-                
+
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo registrar los datos";
             }
@@ -99,16 +100,16 @@ namespace Sol_Minimarket.Datos
             return Rpta;
         }
 
-        public string Eliminar_ep(int Codigo_ep)
+        public string Eliminar_sp(int Codigo_sp)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Eliminar_ep", SqlCon);
+                SqlCommand Comando = new SqlCommand("USP_Eliminar_sp", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@nCodigo_ep", SqlDbType.Int).Value = Codigo_ep;
+                Comando.Parameters.Add("@nCodigo_sp", SqlDbType.Int).Value = Codigo_sp;
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo eliminar los datos";
             }
@@ -123,7 +124,7 @@ namespace Sol_Minimarket.Datos
             return Rpta;
         }
 
-        public DataTable Listado_tde_ep()
+        public DataTable Listado_tde_sp()
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -132,7 +133,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_tde_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_tde_sp", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SQLCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -149,7 +150,7 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_al_ep()
+        public DataTable Listado_cl_sp(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -158,33 +159,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_al_ep", SQLCon);
-                Comando.CommandType = CommandType.StoredProcedure;
-                SQLCon.Open();
-                Resultado = Comando.ExecuteReader();
-                Tabla.Load(Resultado);
-                return Tabla;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
-            }
-        }
-
-        public DataTable Listado_pv_ep(string cTexto)
-        {
-            SqlDataReader Resultado;
-            DataTable Tabla = new DataTable();
-            SqlConnection SQLCon = new SqlConnection();
-
-            try
-            {
-                SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_pv_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_cl_sp", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -202,7 +177,7 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_pr_ep(string cTexto)
+        public DataTable Listado_pr_sp(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -211,7 +186,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_pr_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_pr_sp", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();

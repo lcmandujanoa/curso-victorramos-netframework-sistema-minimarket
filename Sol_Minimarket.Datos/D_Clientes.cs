@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Sol_Minimarket.Datos
 {
-    public class D_Entrada_Productos
+    public class D_Clientes
     {
-        public DataTable Listado_ep(string cTexto)
+        public DataTable Listado_cl(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -20,7 +20,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_cl", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -38,53 +38,30 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_detalle_ep(int nCodigo_ep)
-        {
-            SqlDataReader Resultado;
-            DataTable Tabla = new DataTable();
-            SqlConnection SQLCon = new SqlConnection();
-
-            try
-            {
-                SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_Detalle_ep", SQLCon);
-                Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@nCodigo_ep", SqlDbType.Int).Value = nCodigo_ep;
-                SQLCon.Open();
-                Resultado = Comando.ExecuteReader();
-                Tabla.Load(Resultado);
-                return Tabla;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
-            }
-        }
-
-        public string Guardar_ep(E_Entrada_Productos oEp, DataTable dTabla)
+        public string Guardar_cl(int nOpcion, E_Clientes oCl)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Guardar_ep", SqlCon);
-                Comando.CommandType = CommandType.StoredProcedure;                
-                Comando.Parameters.Add("@nCodigo_tde", SqlDbType.Int).Value = oEp.Codigo_tde;
-                Comando.Parameters.Add("@cNrodocumento_ep", SqlDbType.VarChar).Value = oEp.Nrodocumento_ep;
-                Comando.Parameters.Add("@nCodigo_pv", SqlDbType.Int).Value = oEp.Codigo_pv;
-                Comando.Parameters.Add("@fFecha_ep", SqlDbType.Date).Value = oEp.Fecha_ep;
-                Comando.Parameters.Add("@nCodigo_al", SqlDbType.Int).Value = oEp.Codigo_al;
-                Comando.Parameters.Add("@cObservacion_ep", SqlDbType.Text).Value = oEp.Observacion_ep;
-                Comando.Parameters.Add("@nSubtotal", SqlDbType.Decimal).Value = oEp.Subtotal;
-                Comando.Parameters.Add("@nIgv", SqlDbType.Decimal).Value = oEp.Igv;
-                Comando.Parameters.Add("@nTotal_importe", SqlDbType.Decimal).Value = oEp.Total_importe;
-                Comando.Parameters.Add("@tDetalle", SqlDbType.Structured).Value = dTabla;
-                
+                SqlCommand Comando = new SqlCommand("USP_Guardar_cl", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion;
+                Comando.Parameters.Add("@nCodigo_cl", SqlDbType.Int).Value = oCl.Codigo_cl;
+                Comando.Parameters.Add("@nCodigo_tdpc", SqlDbType.Int).Value = oCl.Codigo_tdpc;
+                Comando.Parameters.Add("@cNrodocumento_cl", SqlDbType.VarChar).Value = oCl.Nrodocumento_cl;
+                Comando.Parameters.Add("@cRazon_social_cl", SqlDbType.VarChar).Value = oCl.Razon_social_cl;
+                Comando.Parameters.Add("@cNombres", SqlDbType.VarChar).Value = oCl.Nombres;
+                Comando.Parameters.Add("@cApellidos", SqlDbType.VarChar).Value = oCl.Apellidos;
+                Comando.Parameters.Add("@nCodigo_sx", SqlDbType.Int).Value = oCl.Codigo_sx;
+                Comando.Parameters.Add("@nCodigo_ru", SqlDbType.Int).Value = oCl.Codigo_ru;
+                Comando.Parameters.Add("@cEmail_cl", SqlDbType.VarChar).Value = oCl.Email_cl;
+                Comando.Parameters.Add("@cTelefono_cl", SqlDbType.VarChar).Value = oCl.Telefono_cl;
+                Comando.Parameters.Add("@cMovil_cl", SqlDbType.VarChar).Value = oCl.Movil_cl;
+                Comando.Parameters.Add("@cDireccion", SqlDbType.Text).Value = oCl.Direccion_cl;
+                Comando.Parameters.Add("@nCodigo_di", SqlDbType.Int).Value = oCl.Codigo_di;
+                Comando.Parameters.Add("@cObservacion_cl", SqlDbType.Text).Value = oCl.Observacion_cl;
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo registrar los datos";
             }
@@ -99,18 +76,18 @@ namespace Sol_Minimarket.Datos
             return Rpta;
         }
 
-        public string Eliminar_ep(int Codigo_ep)
+        public string Eliminar_cl(int Codigo_cl)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Eliminar_ep", SqlCon);
+                SqlCommand Comando = new SqlCommand("USP_Eliminar_cl", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@nCodigo_ep", SqlDbType.Int).Value = Codigo_ep;
+                Comando.Parameters.Add("@nCodigo_cl", SqlDbType.Int).Value = Codigo_cl;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo eliminar los datos";
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo eliminar los datos";
             }
             catch (Exception ex)
             {
@@ -123,7 +100,7 @@ namespace Sol_Minimarket.Datos
             return Rpta;
         }
 
-        public DataTable Listado_tde_ep()
+        public DataTable Listado_tdpc_cl()
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -132,7 +109,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_tde_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_tdpc_cl", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SQLCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -149,7 +126,7 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_al_ep()
+        public DataTable Listado_sx_cl()
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -158,7 +135,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_al_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_sx_cl", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SQLCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -175,7 +152,7 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_pv_ep(string cTexto)
+        public DataTable Listado_ru_cl(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -184,7 +161,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_pv_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_ru_cl", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
@@ -202,7 +179,7 @@ namespace Sol_Minimarket.Datos
             }
         }
 
-        public DataTable Listado_pr_ep(string cTexto)
+        public DataTable Listado_di_cl(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -211,7 +188,7 @@ namespace Sol_Minimarket.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_pr_ep", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_di_cl", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();

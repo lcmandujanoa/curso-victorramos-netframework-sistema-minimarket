@@ -55,6 +55,7 @@ namespace Sol_Minimarket.Datos
                 Comando.Parameters.Add("@nCodigo_ca", SqlDbType.Int).Value = oPr.Codigo_ca;
                 Comando.Parameters.Add("@nStock_min", SqlDbType.Decimal).Value = oPr.Stock_min;
                 Comando.Parameters.Add("@nStock_max", SqlDbType.Decimal).Value = oPr.Stock_max;
+                Comando.Parameters.Add("@nPu_venta", SqlDbType.Decimal).Value = oPr.Pu_venta;
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo registrar los datos";
             }

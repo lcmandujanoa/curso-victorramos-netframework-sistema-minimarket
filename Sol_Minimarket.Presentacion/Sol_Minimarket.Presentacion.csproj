@@ -70,11 +70,23 @@
     <Compile Include="Frm_Distritos.Designer.cs">
       <DependentUpon>Frm_Distritos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Salida_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Salida_Productos.Designer.cs">
+      <DependentUpon>Frm_Salida_Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Entrada_Productos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Entrada_Productos.Designer.cs">
       <DependentUpon>Frm_Entrada_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Clientes.Designer.cs">
+      <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Proveedores.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,12 @@
     <Compile Include="Reportes\Frm_Rpt_Categorias.Designer.cs">
       <DependentUpon>Frm_Rpt_Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Clientes.Designer.cs">
+      <DependentUpon>Frm_Rpt_Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Frm_Rpt_Departamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +178,12 @@
     </Compile>
     <Compile Include="Reportes\Frm_Rpt_Distritos.Designer.cs">
       <DependentUpon>Frm_Rpt_Distritos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Entrada_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Rpt_Entrada_Productos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Entrada_Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\Frm_Rpt_Marcas.cs">
       <SubType>Form</SubType>
@@ -201,8 +225,14 @@
     <EmbeddedResource Include="Frm_Distritos.resx">
       <DependentUpon>Frm_Distritos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Salida_Productos.resx">
+      <DependentUpon>Frm_Salida_Productos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Entrada_Productos.resx">
       <DependentUpon>Frm_Entrada_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Clientes.resx">
+      <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Proveedores.resx">
       <DependentUpon>Frm_Proveedores.cs</DependentUpon>
@@ -246,11 +276,17 @@
     <EmbeddedResource Include="Reportes\Frm_Rpt_Categorias.resx">
       <DependentUpon>Frm_Rpt_Categorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Clientes.resx">
+      <DependentUpon>Frm_Rpt_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Frm_Rpt_Departamentos.resx">
       <DependentUpon>Frm_Rpt_Departamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Frm_Rpt_Distritos.resx">
       <DependentUpon>Frm_Rpt_Distritos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Rpt_Entrada_Productos.resx">
+      <DependentUpon>Frm_Rpt_Entrada_Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Frm_Rpt_Marcas.resx">
       <DependentUpon>Frm_Rpt_Marcas.cs</DependentUpon>
@@ -272,8 +308,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Rpt_Almacenes.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Categorias.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Clientes.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Departamentos.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Distritos.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_Entrada_Productos.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Marcas.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Productos.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Proveedores.rdlc" />

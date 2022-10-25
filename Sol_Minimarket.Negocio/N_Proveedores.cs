@@ -50,8 +50,6 @@ namespace Sol_Minimarket.Negocio
         {
             D_Proveedores Datos = new D_Proveedores();
             return Datos.Listado_di_pv(cTexto);
-        }
-
-       
+        }       
     }
 }

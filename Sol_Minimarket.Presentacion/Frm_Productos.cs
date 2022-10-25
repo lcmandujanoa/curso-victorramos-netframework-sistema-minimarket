@@ -47,6 +47,7 @@ namespace Sol_Minimarket.Presentacion
             Dgv_principal.Columns[7].Visible = false;
             Dgv_principal.Columns[8].Visible = false;
             Dgv_principal.Columns[9].Visible = false;
+            Dgv_principal.Columns[10].Visible = false;
         }
 
         private void Listado_pr(string cTexto)
@@ -98,6 +99,7 @@ namespace Sol_Minimarket.Presentacion
 
                 Txt_stock_min.Text = Convert.ToString(Dgv_principal.CurrentRow.Cells["stock_min"].Value);
                 Txt_stock_max.Text = Convert.ToString(Dgv_principal.CurrentRow.Cells["stock_max"].Value);
+                Txt_pu_venta.Text = Convert.ToString(Dgv_principal.CurrentRow.Cells["pu_venta"].Value);
             }
         }
 
@@ -240,7 +242,8 @@ namespace Sol_Minimarket.Presentacion
             if (Txt_descripcion_pr.Text == string.Empty ||
                 Txt_descripcion_ma.Text == string.Empty ||
                 Txt_descripcion_um.Text == string.Empty ||
-                Txt_descripcion_ca.Text == string.Empty)
+                Txt_descripcion_ca.Text == string.Empty ||
+                Txt_pu_venta.Text == string.Empty)
             {
                 MessageBox.Show("Falta ingresar datos requeridos (*)", "Aviso del Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -249,30 +252,33 @@ namespace Sol_Minimarket.Presentacion
             {
                 E_Productos oPr = new E_Productos();
                 string Rpta = "";
-                oPr.Codigo_pr = this.Codigo_pr;
+                oPr.Codigo_pr = Codigo_pr;
                 oPr.Descripcion_pr = Txt_descripcion_pr.Text;
                 oPr.Codigo_ma = Codigo_ma;
                 oPr.Codigo_um = Codigo_um;
                 oPr.Codigo_ca = Codigo_ca;
                 oPr.Stock_min = Convert.ToDecimal(Txt_stock_min.Text);
                 oPr.Stock_max = Convert.ToDecimal(Txt_stock_max.Text);
+                oPr.Pu_venta = Convert.ToDecimal(Txt_pu_venta.Text);
                 Rpta = N_Productos.Guardar_pr(Estadoguarda, oPr);
                 if (Rpta == "OK")
                 {
-                    this.Listado_pr("%");
+                    Listado_pr("%");
                     MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Estadoguarda = 0; //Sin ninguna acción
-                    this.Estado_Botonesprincipales(true);
-                    this.Estado_Botonesprocesos(false);
+                    Estado_Botonesprincipales(true);
+                    Estado_Botonesprocesos(false);
                     Txt_descripcion_pr.Text = "";
                     Txt_stock_min.Text = "0";
                     Txt_stock_max.Text = "0";
+                    Txt_pu_venta.Text = "0";
                     Txt_descripcion_pr.ReadOnly = true;
                     Txt_stock_min.ReadOnly = true;
                     Txt_stock_max.ReadOnly = true;
+                    Txt_pu_venta.ReadOnly = true;
                     Tbc_principal.SelectedIndex = 0;
-                    this.Codigo_pr = 0;
+                    Codigo_pr = 0;
                     Gbx_detalle.Visible = false;
                 }
                 else
@@ -291,9 +297,11 @@ namespace Sol_Minimarket.Presentacion
             Txt_descripcion_pr.Text = "";
             Txt_stock_min.Text = "0";
             Txt_stock_max.Text = "0";
+            Txt_pu_venta.Text = "0";
             Txt_descripcion_pr.ReadOnly = false;
             Txt_stock_min.ReadOnly = false;
             Txt_stock_max.ReadOnly = false;
+            Txt_pu_venta.ReadOnly = false;
             Tbc_principal.SelectedIndex = 1;
             Txt_descripcion_pr.Focus();
         }
@@ -307,6 +315,9 @@ namespace Sol_Minimarket.Presentacion
             this.Selecciona_item();
             Tbc_principal.SelectedIndex = 1;
             Txt_descripcion_pr.ReadOnly = false;
+            Txt_stock_min.ReadOnly = false;
+            Txt_stock_max.ReadOnly = false;
+            Txt_pu_venta.ReadOnly = false;
             Txt_descripcion_pr.Focus();
         }
 
@@ -318,9 +329,11 @@ namespace Sol_Minimarket.Presentacion
             Txt_descripcion_pr.Text = "";
             Txt_stock_min.Text = "0";
             Txt_stock_max.Text = "0";
+            Txt_pu_venta.Text = "0";
             Txt_descripcion_pr.ReadOnly = true;
             Txt_stock_min.ReadOnly = true;
             Txt_stock_max.ReadOnly = true;
+            Txt_pu_venta.ReadOnly = true;
             this.Estado_Botonesprincipales(true);
             this.Estado_Botonesprocesos(false);
             Tbc_principal.SelectedIndex = 0;

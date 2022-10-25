@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Productos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Productos));
             this.Tbc_principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
@@ -51,6 +51,7 @@
             this.Dgv_Stock_actual = new System.Windows.Forms.DataGridView();
             this.Pnl_Listado_ca = new System.Windows.Forms.Panel();
             this.Btn_retornar3 = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.Btn_buscar3 = new System.Windows.Forms.Button();
             this.Txt_buscar3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -94,7 +95,8 @@
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_reporte = new System.Windows.Forms.Button();
             this.Btn_salir = new System.Windows.Forms.Button();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.Txt_pu_venta = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.Tbc_principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
@@ -191,6 +193,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Txt_pu_venta);
+            this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.Gbx_detalle);
             this.tabPage2.Controls.Add(this.Pnl_Listado_ca);
             this.tabPage2.Controls.Add(this.Pnl_Listado_um);
@@ -283,6 +287,13 @@
             this.Btn_retornar3.TabIndex = 24;
             this.Btn_retornar3.UseVisualStyleBackColor = true;
             this.Btn_retornar3.Click += new System.EventHandler(this.Btn_retornar3_Click);
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "lupa.png");
+            this.imageList2.Images.SetKeyName(1, "retornar.png");
             // 
             // Btn_buscar3
             // 
@@ -529,17 +540,17 @@
             // 
             // Txt_stock_max
             // 
-            this.Txt_stock_max.Location = new System.Drawing.Point(203, 215);
+            this.Txt_stock_max.Location = new System.Drawing.Point(205, 178);
             this.Txt_stock_max.MaxLength = 10;
             this.Txt_stock_max.Name = "Txt_stock_max";
             this.Txt_stock_max.ReadOnly = true;
             this.Txt_stock_max.Size = new System.Drawing.Size(86, 20);
-            this.Txt_stock_max.TabIndex = 17;
+            this.Txt_stock_max.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(200, 199);
+            this.label7.Location = new System.Drawing.Point(202, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 13);
             this.label7.TabIndex = 16;
@@ -547,17 +558,17 @@
             // 
             // Txt_stock_min
             // 
-            this.Txt_stock_min.Location = new System.Drawing.Point(81, 215);
+            this.Txt_stock_min.Location = new System.Drawing.Point(83, 178);
             this.Txt_stock_min.MaxLength = 10;
             this.Txt_stock_min.Name = "Txt_stock_min";
             this.Txt_stock_min.ReadOnly = true;
             this.Txt_stock_min.Size = new System.Drawing.Size(86, 20);
-            this.Txt_stock_min.TabIndex = 15;
+            this.Txt_stock_min.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(78, 199);
+            this.label6.Location = new System.Drawing.Point(80, 162);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 14;
@@ -567,16 +578,16 @@
             // 
             this.Btn_lupa3.ImageKey = "lupa.png";
             this.Btn_lupa3.ImageList = this.imageList2;
-            this.Btn_lupa3.Location = new System.Drawing.Point(295, 129);
+            this.Btn_lupa3.Location = new System.Drawing.Point(297, 129);
             this.Btn_lupa3.Name = "Btn_lupa3";
             this.Btn_lupa3.Size = new System.Drawing.Size(30, 23);
-            this.Btn_lupa3.TabIndex = 13;
+            this.Btn_lupa3.TabIndex = 4;
             this.Btn_lupa3.UseVisualStyleBackColor = true;
             this.Btn_lupa3.Click += new System.EventHandler(this.Btn_lupa3_Click);
             // 
             // Txt_descripcion_ca
             // 
-            this.Txt_descripcion_ca.Location = new System.Drawing.Point(81, 129);
+            this.Txt_descripcion_ca.Location = new System.Drawing.Point(83, 129);
             this.Txt_descripcion_ca.Name = "Txt_descripcion_ca";
             this.Txt_descripcion_ca.ReadOnly = true;
             this.Txt_descripcion_ca.Size = new System.Drawing.Size(208, 20);
@@ -585,7 +596,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 132);
+            this.label5.Location = new System.Drawing.Point(7, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 11;
@@ -595,16 +606,16 @@
             // 
             this.Btn_lupa2.ImageKey = "lupa.png";
             this.Btn_lupa2.ImageList = this.imageList2;
-            this.Btn_lupa2.Location = new System.Drawing.Point(295, 93);
+            this.Btn_lupa2.Location = new System.Drawing.Point(297, 93);
             this.Btn_lupa2.Name = "Btn_lupa2";
             this.Btn_lupa2.Size = new System.Drawing.Size(30, 23);
-            this.Btn_lupa2.TabIndex = 10;
+            this.Btn_lupa2.TabIndex = 3;
             this.Btn_lupa2.UseVisualStyleBackColor = true;
             this.Btn_lupa2.Click += new System.EventHandler(this.Btn_lupa2_Click);
             // 
             // Txt_descripcion_um
             // 
-            this.Txt_descripcion_um.Location = new System.Drawing.Point(81, 93);
+            this.Txt_descripcion_um.Location = new System.Drawing.Point(83, 93);
             this.Txt_descripcion_um.Name = "Txt_descripcion_um";
             this.Txt_descripcion_um.ReadOnly = true;
             this.Txt_descripcion_um.Size = new System.Drawing.Size(208, 20);
@@ -613,7 +624,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 96);
+            this.label4.Location = new System.Drawing.Point(19, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 8;
@@ -623,16 +634,16 @@
             // 
             this.Btn_lupa1.ImageKey = "lupa.png";
             this.Btn_lupa1.ImageList = this.imageList2;
-            this.Btn_lupa1.Location = new System.Drawing.Point(295, 58);
+            this.Btn_lupa1.Location = new System.Drawing.Point(297, 58);
             this.Btn_lupa1.Name = "Btn_lupa1";
             this.Btn_lupa1.Size = new System.Drawing.Size(30, 23);
-            this.Btn_lupa1.TabIndex = 7;
+            this.Btn_lupa1.TabIndex = 2;
             this.Btn_lupa1.UseVisualStyleBackColor = true;
             this.Btn_lupa1.Click += new System.EventHandler(this.Btn_lupa1_Click);
             // 
             // Txt_descripcion_ma
             // 
-            this.Txt_descripcion_ma.Location = new System.Drawing.Point(81, 58);
+            this.Txt_descripcion_ma.Location = new System.Drawing.Point(83, 58);
             this.Txt_descripcion_ma.Name = "Txt_descripcion_ma";
             this.Txt_descripcion_ma.ReadOnly = true;
             this.Txt_descripcion_ma.Size = new System.Drawing.Size(208, 20);
@@ -641,7 +652,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 61);
+            this.label3.Location = new System.Drawing.Point(24, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 5;
@@ -655,7 +666,7 @@
             this.Btn_retornar.Location = new System.Drawing.Point(284, 289);
             this.Btn_retornar.Name = "Btn_retornar";
             this.Btn_retornar.Size = new System.Drawing.Size(76, 26);
-            this.Btn_retornar.TabIndex = 4;
+            this.Btn_retornar.TabIndex = 10;
             this.Btn_retornar.Text = "Retornar";
             this.Btn_retornar.UseVisualStyleBackColor = false;
             this.Btn_retornar.Visible = false;
@@ -669,7 +680,7 @@
             this.Btn_guardar.Location = new System.Drawing.Point(203, 289);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(76, 26);
-            this.Btn_guardar.TabIndex = 3;
+            this.Btn_guardar.TabIndex = 9;
             this.Btn_guardar.Text = "Guardar";
             this.Btn_guardar.UseVisualStyleBackColor = false;
             this.Btn_guardar.Visible = false;
@@ -683,7 +694,7 @@
             this.Btn_cancelar.Location = new System.Drawing.Point(122, 289);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(76, 26);
-            this.Btn_cancelar.TabIndex = 2;
+            this.Btn_cancelar.TabIndex = 8;
             this.Btn_cancelar.Text = "Cancelar";
             this.Btn_cancelar.UseVisualStyleBackColor = false;
             this.Btn_cancelar.Visible = false;
@@ -691,7 +702,7 @@
             // 
             // Txt_descripcion_pr
             // 
-            this.Txt_descripcion_pr.Location = new System.Drawing.Point(81, 27);
+            this.Txt_descripcion_pr.Location = new System.Drawing.Point(83, 27);
             this.Txt_descripcion_pr.MaxLength = 100;
             this.Txt_descripcion_pr.Name = "Txt_descripcion_pr";
             this.Txt_descripcion_pr.ReadOnly = true;
@@ -701,7 +712,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 30);
+            this.label1.Location = new System.Drawing.Point(11, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 0;
@@ -792,12 +803,22 @@
             this.Btn_salir.UseVisualStyleBackColor = false;
             this.Btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
-            // imageList2
+            // Txt_pu_venta
             // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "lupa.png");
-            this.imageList2.Images.SetKeyName(1, "retornar.png");
+            this.Txt_pu_venta.Location = new System.Drawing.Point(83, 214);
+            this.Txt_pu_venta.Name = "Txt_pu_venta";
+            this.Txt_pu_venta.ReadOnly = true;
+            this.Txt_pu_venta.Size = new System.Drawing.Size(86, 20);
+            this.Txt_pu_venta.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(2, 217);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "P.U. Venta: (*)";
             // 
             // Frm_Productos
             // 
@@ -892,5 +913,7 @@
         private System.Windows.Forms.GroupBox Gbx_detalle;
         private System.Windows.Forms.DataGridView Dgv_Stock_actual;
         private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.TextBox Txt_pu_venta;
+        private System.Windows.Forms.Label label14;
     }
 }

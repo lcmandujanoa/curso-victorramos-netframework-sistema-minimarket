@@ -15,5 +15,6 @@ namespace Sol_Minimarket.Entidades
         public int Codigo_ca { get; set; }
         public decimal Stock_min { get; set; }
         public decimal Stock_max { get; set; }
+        public decimal Pu_venta { get; set; }
     }
 }
