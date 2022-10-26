@@ -142,6 +142,12 @@
     <Compile Include="Frm_Categorias.Designer.cs">
       <DependentUpon>Frm_Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDI_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Principal.Designer.cs">
+      <DependentUpon>MDI_Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\DataSet_MiniMarket.Designer.cs">
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Categorias.resx">
       <DependentUpon>Frm_Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Principal.resx">
+      <DependentUpon>MDI_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
