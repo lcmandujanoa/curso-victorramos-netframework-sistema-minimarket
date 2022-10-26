@@ -453,9 +453,6 @@ namespace Sol_Minimarket.Presentacion
                     Dgv_Detalle.Columns[4].ReadOnly = true;
                     Tbc_principal.SelectedIndex = 0;
                     Codigo_ep = 0;
-                    Codigo_tde = 0;
-                    Codigo_pv = 0;
-                    Codigo_al = 0;
                     Estadoguarda = 0;
                 }
                 else

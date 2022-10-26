@@ -86,8 +86,15 @@ namespace Sol_Minimarket.Datos
                 Comando.Parameters.Add("@nTotal_importe", SqlDbType.Decimal).Value = oSp.Total_importe;
                 Comando.Parameters.Add("@tDetalle", SqlDbType.Structured).Value = dTabla;
 
+                SqlParameter ParCodigo = new SqlParameter();
+                ParCodigo.ParameterName = "@nCodigo_sp";
+                ParCodigo.SqlDbType = SqlDbType.Int;
+                ParCodigo.Direction = ParameterDirection.Output;
+                Comando.Parameters.Add(ParCodigo);
+
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo registrar los datos";
+                Comando.ExecuteNonQuery();
+                Rpta = Convert.ToString(ParCodigo.Value);
             }
             catch (Exception ex)
             {

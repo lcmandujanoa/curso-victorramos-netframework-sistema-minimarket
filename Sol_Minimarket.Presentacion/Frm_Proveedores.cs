@@ -346,10 +346,6 @@ namespace Sol_Minimarket.Presentacion
                     Estado_texto(false);
                     Tbc_principal.SelectedIndex = 0;
                     Codigo_pv = 0;
-                    Codigo_tdpc = 0;
-                    Codigo_sx = 0;
-                    Codigo_ru = 0;
-                    Codigo_di = 0;
                 }
                 else
                 {

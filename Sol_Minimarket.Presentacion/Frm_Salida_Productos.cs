@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Sol_Minimarket.Entidades;
 using Sol_Minimarket.Negocio;
 
@@ -76,7 +77,6 @@ namespace Sol_Minimarket.Presentacion
         {
             Btn_cancelar.Visible = lEstado;
             Btn_guardar.Visible = lEstado;
-            Btn_retornar.Visible = !lEstado;
 
             Btn_agregar.Visible = lEstado;
             Btn_quitar.Visible = lEstado;
@@ -245,6 +245,18 @@ namespace Sol_Minimarket.Presentacion
                 Codigo_cl = Convert.ToInt32(Dgv_clientes.CurrentRow.Cells["codigo_cl"].Value);
                 Txt_nrodocumento_cl.Text = Convert.ToString(Dgv_clientes.CurrentRow.Cells["nrodocumento_cl"].Value);
                 Txt_razon_social_cl.Text = Convert.ToString(Dgv_clientes.CurrentRow.Cells["razon_social_cl"].Value);
+                if (Codigo_cl == 1) //Si es el cliente genérico
+                {
+                    Txt_nrodocumento_cl.ReadOnly = false;
+                    Txt_razon_social_cl.ReadOnly = false;
+                    Txt_nrodocumento_cl.Focus();
+                }
+                else //Para los demás clientes
+                {
+                    Txt_nrodocumento_cl.ReadOnly = true;
+                    Txt_razon_social_cl.ReadOnly = true;
+                    Txt_observacion_sp.Focus();
+                }
             }
         }
 
@@ -319,6 +331,7 @@ namespace Sol_Minimarket.Presentacion
                     xTotal = decimal.Round(xCantidad * xPu_venta, 2);
 
                     Agregar_item(xDescripcion_pr, xDescripcion_ma, xDescripcion_um, xCantidad, xPu_venta, xTotal, xCodigo_pr);
+                    Calcular_Totales();
                 }
             }
         }
@@ -406,19 +419,25 @@ namespace Sol_Minimarket.Presentacion
                 TablaDetalle.AcceptChanges();
 
                 Rpta = N_Salida_Productos.Guardar_sp(oSp, TablaDetalle);
-                if (Rpta.Equals("OK"))
+                if (Rpta != string.Empty)
                 {
+                    Codigo_sp = Convert.ToInt32(Rpta);
                     Listado_sp("%");
-                    MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema",
+                    MessageBox.Show("Los datos han sido guardados correctamente # " + Codigo_sp, "Aviso del Sistema", 
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Generando el ticket de la venta
+                    Reportes.Frm_Rpt_Imprimir_Venta_Generada oRpt14 = new Reportes.Frm_Rpt_Imprimir_Venta_Generada();
+                    oRpt14.txt_p1.Text = Rpta;
+                    oRpt14.ShowDialog();
+                    //fin del proceso del ticket para imprimir
+
                     Estado_Botonesprincipales(true);
                     Estado_Botonesprocesos(false);
                     Estado_texto(false);
                     Dgv_Detalle.Columns[3].ReadOnly = true;
                     Tbc_principal.SelectedIndex = 0;
                     Codigo_sp = 0;
-                    Codigo_tde = 0;
-                    Codigo_cl = 0;
                     Estadoguarda = 0;
                 }
                 else
@@ -462,7 +481,7 @@ namespace Sol_Minimarket.Presentacion
         {
             Selecciona_item();
             Estado_Botonesprocesos(false);
-            Tbc_principal.SelectedIndex = 1;
+            Tbc_principal.SelectedIndex = 0;
         }
 
         private void Btn_eliminar_Click(object sender, EventArgs e)
@@ -481,13 +500,14 @@ namespace Sol_Minimarket.Presentacion
                 {
                     string Rpta = "";
                     Codigo_sp = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["codigo_sp"].Value);
-                    Rpta = N_Entrada_Productos.Eliminar_ep(Codigo_sp);
+                    Rpta = N_Salida_Productos.Eliminar_sp(Codigo_sp);
                     if (Rpta.Equals("OK"))
                     {
                         Listado_sp("%");
+                        Limpia_texto();
                         Codigo_sp = 0;
-                        MessageBox.Show("Registro Anulado", "Aviso del Sistema",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Registro Anulado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Tbc_principal.SelectedIndex = 1;
                     }
 
                 }                
@@ -501,9 +521,9 @@ namespace Sol_Minimarket.Presentacion
 
         private void Btn_reporte_Click(object sender, EventArgs e)
         {
-            Reportes.Frm_Rpt_Entrada_Productos oRpt11 = new Reportes.Frm_Rpt_Entrada_Productos();
-            oRpt11.txt_p1.Text = Txt_buscar.Text;
-            oRpt11.ShowDialog();
+            Reportes.Frm_Rpt_Salida_Productos oRpt13 = new Reportes.Frm_Rpt_Salida_Productos();
+            oRpt13.txt_p1.Text = Txt_buscar.Text;
+            oRpt13.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)
@@ -544,7 +564,6 @@ namespace Sol_Minimarket.Presentacion
         {
             Selecciona_item_cl_sp();
             Pnl_Listado_cl.Visible = false;
-            Txt_observacion_sp.Focus();
         }
 
         private void Btn_retornar2_Click(object sender, EventArgs e)
@@ -603,15 +622,6 @@ namespace Sol_Minimarket.Presentacion
                 TablaDetalle.AcceptChanges();
                 Calcular_Totales();
             }
-        }
-
-        private void Btn_retornar_Click(object sender, EventArgs e)
-        {
-            Estado_Botonesprocesos(false);
-            Tbc_principal.SelectedIndex = 0;
-
-            Btn_retornar.Visible = false;
-            Txt_nrodocumento_sp.Text = "";
         }
     }
 }
