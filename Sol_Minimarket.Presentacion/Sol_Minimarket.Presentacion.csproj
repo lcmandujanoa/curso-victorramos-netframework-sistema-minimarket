@@ -7,11 +7,27 @@
     <ProjectGuid>{05F9E77E-35F7-45FF-8E43-C94E686170A6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sol_Minimarket.Presentacion</RootNamespace>
-    <AssemblyName>Sol_Minimarket.Presentacion</AssemblyName>
+    <AssemblyName>Sistema de MiniMarket</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\luisc\source\instaladores\SistemaMiniMarket\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono_minimarket.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>85ED24A4AEF93F11B118A63F488149CCBD23F3C7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Sol_Minimarket.Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -239,6 +270,59 @@
     <Compile Include="Reportes\Frm_Rpt_Unidades_Medidas.Designer.cs">
       <DependentUpon>Frm_Rpt_Unidades_Medidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes_Consolidado\DataSet_Reportes_Consolidado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Reportes_Consolidado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Ingreso_AcumuladoxProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Ingreso_AcumuladoxProducto.Designer.cs">
+      <DependentUpon>Frm_Reporte_Ingreso_AcumuladoxProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Salida_AcumuladaxProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Salida_AcumuladaxProducto.Designer.cs">
+      <DependentUpon>Frm_Reporte_Salida_AcumuladaxProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Salida_VentasxProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Salida_VentasxProducto.Designer.cs">
+      <DependentUpon>Frm_Reporte_Salida_VentasxProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Ingreso_ComprasxProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Reporte_Ingreso_ComprasxProducto.Designer.cs">
+      <DependentUpon>Frm_Reporte_Ingreso_ComprasxProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Ingreso_AcumuladoxProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Ingreso_AcumuladoxProducto.Designer.cs">
+      <DependentUpon>Frm_Rpt_Ingreso_AcumuladoxProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Ingreso_ComprasxProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Ingreso_ComprasxProductos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Ingreso_ComprasxProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Salida_AcumuladaxProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Salida_AcumuladaxProducto.Designer.cs">
+      <DependentUpon>Frm_Rpt_Salida_AcumuladaxProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Salida_VentasxProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes_Consolidado\Frm_Rpt_Salida_VentasxProductos.Designer.cs">
+      <DependentUpon>Frm_Rpt_Salida_VentasxProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Frm_Distritos.resx">
       <DependentUpon>Frm_Distritos.cs</DependentUpon>
@@ -347,6 +431,34 @@
     <EmbeddedResource Include="Reportes\Rpt_Rubros.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Salida_Productos.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Unidades_Medidas.rdlc" />
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Reporte_Ingreso_AcumuladoxProducto.resx">
+      <DependentUpon>Frm_Reporte_Ingreso_AcumuladoxProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Reporte_Salida_AcumuladaxProducto.resx">
+      <DependentUpon>Frm_Reporte_Salida_AcumuladaxProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Reporte_Salida_VentasxProducto.resx">
+      <DependentUpon>Frm_Reporte_Salida_VentasxProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Reporte_Ingreso_ComprasxProducto.resx">
+      <DependentUpon>Frm_Reporte_Ingreso_ComprasxProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Rpt_Ingreso_AcumuladoxProducto.resx">
+      <DependentUpon>Frm_Rpt_Ingreso_AcumuladoxProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Rpt_Ingreso_ComprasxProductos.resx">
+      <DependentUpon>Frm_Rpt_Ingreso_ComprasxProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Rpt_Salida_AcumuladaxProducto.resx">
+      <DependentUpon>Frm_Rpt_Salida_AcumuladaxProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Frm_Rpt_Salida_VentasxProductos.resx">
+      <DependentUpon>Frm_Rpt_Salida_VentasxProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_Consolidado\Rpt_Ingreso_AcumuladoxProducto.rdlc" />
+    <EmbeddedResource Include="Reportes_Consolidado\Rpt_Ingreso_ComprasxProductos.rdlc" />
+    <EmbeddedResource Include="Reportes_Consolidado\Rpt_Salida_AcumuladaxProducto.rdlc" />
+    <EmbeddedResource Include="Reportes_Consolidado\Rpt_Salida_VentasxProductos.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -368,6 +480,18 @@
     <None Include="Reportes\DataSet_MiniMarket.xss">
       <DependentUpon>DataSet_MiniMarket.xsd</DependentUpon>
     </None>
+    <None Include="Reportes_Consolidado\DataSet_Reportes_Consolidado.xsc">
+      <DependentUpon>DataSet_Reportes_Consolidado.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes_Consolidado\DataSet_Reportes_Consolidado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Reportes_Consolidado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes_Consolidado\DataSet_Reportes_Consolidado.xss">
+      <DependentUpon>DataSet_Reportes_Consolidado.xsd</DependentUpon>
+    </None>
+    <None Include="Sol_Minimarket.Presentacion_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -383,6 +507,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icono_minimarket.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -396,6 +521,18 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

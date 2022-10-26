@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sol_Minimarket.Presentacion.Reportes_Consolidado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -164,6 +165,38 @@ namespace Sol_Minimarket.Presentacion
             oFrm_sp.MdiParent = this;
             oFrm_sp.StartPosition = FormStartPosition.CenterScreen;
             oFrm_sp.Show();
+        }
+
+        private void ingresosDeComprasPorProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Ingreso_ComprasxProducto oFrm_ICP = new Frm_Reporte_Ingreso_ComprasxProducto();
+            oFrm_ICP.MdiParent = this;
+            oFrm_ICP.StartPosition = FormStartPosition.CenterScreen;
+            oFrm_ICP.Show();
+        }
+
+        private void salidasDeVentasPorProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Salida_VentasxProducto oFrm_SVP = new Frm_Reporte_Salida_VentasxProducto();
+            oFrm_SVP.MdiParent = this;
+            oFrm_SVP.StartPosition = FormStartPosition.CenterScreen;
+            oFrm_SVP.Show();
+        }
+
+        private void ingresoAcumuladoPorProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Ingreso_AcumuladoxProducto oFrm_IAP = new Frm_Reporte_Ingreso_AcumuladoxProducto();
+            oFrm_IAP.MdiParent = this;
+            oFrm_IAP.StartPosition = FormStartPosition.CenterScreen;
+            oFrm_IAP.Show();
+        }
+
+        private void salidaAcumuladaPorProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Salida_AcumuladaxProducto oFrm_SAP = new Frm_Reporte_Salida_AcumuladaxProducto();
+            oFrm_SAP.MdiParent = this;
+            oFrm_SAP.StartPosition = FormStartPosition.CenterScreen;
+            oFrm_SAP.Show();
         }
     }
 }

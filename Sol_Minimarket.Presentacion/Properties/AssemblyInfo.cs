@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Sol_Minimarket.Presentacion")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Sistema de MiniMarket")]
+[assembly: AssemblyDescription("Sistema de Control de Ventas")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Sol_Minimarket.Presentacion")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCompany("Top Business 3L")]
+[assembly: AssemblyProduct("SysMiniMarket")]
+[assembly: AssemblyCopyright("Todos los derecho de autoría pertenecen a Top Business 3L")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
