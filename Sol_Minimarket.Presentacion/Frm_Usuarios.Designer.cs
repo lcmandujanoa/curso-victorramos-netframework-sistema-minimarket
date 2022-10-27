@@ -1,6 +1,6 @@
 ﻿namespace Sol_Minimarket.Presentacion
 {
-    partial class Frm_Rubros
+    partial class Frm_Usuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Rubros));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Usuarios));
             this.Tbc_principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
@@ -39,10 +39,17 @@
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Chk_es_admin = new System.Windows.Forms.CheckBox();
+            this.Txt_cargo_us = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Txt_nombres_us = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Txt_login_us = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.Btn_retornar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_cancelar = new System.Windows.Forms.Button();
-            this.Txt_descripcion_ru = new System.Windows.Forms.TextBox();
+            this.Txt_password_us = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_nuevo = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -63,7 +70,7 @@
             // 
             this.Tbc_principal.Controls.Add(this.tabPage1);
             this.Tbc_principal.Controls.Add(this.tabPage2);
-            this.Tbc_principal.Location = new System.Drawing.Point(12, 47);
+            this.Tbc_principal.Location = new System.Drawing.Point(12, 46);
             this.Tbc_principal.Name = "Tbc_principal";
             this.Tbc_principal.SelectedIndex = 0;
             this.Tbc_principal.Size = new System.Drawing.Size(740, 260);
@@ -87,18 +94,18 @@
             // 
             this.Dgv_principal.AllowUserToAddRows = false;
             this.Dgv_principal.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
-            this.Dgv_principal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_principal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_principal.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.Dgv_principal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_principal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_principal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_principal.ColumnHeadersHeight = 35;
             this.Dgv_principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_principal.EnableHeadersVisualStyles = false;
@@ -141,10 +148,17 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Chk_es_admin);
+            this.tabPage2.Controls.Add(this.Txt_cargo_us);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.Txt_nombres_us);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.Txt_login_us);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.Btn_retornar);
             this.tabPage2.Controls.Add(this.Btn_guardar);
             this.tabPage2.Controls.Add(this.Btn_cancelar);
-            this.tabPage2.Controls.Add(this.Txt_descripcion_ru);
+            this.tabPage2.Controls.Add(this.Txt_password_us);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -154,15 +168,79 @@
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // Chk_es_admin
+            // 
+            this.Chk_es_admin.AutoSize = true;
+            this.Chk_es_admin.Location = new System.Drawing.Point(99, 137);
+            this.Chk_es_admin.Name = "Chk_es_admin";
+            this.Chk_es_admin.Size = new System.Drawing.Size(89, 17);
+            this.Chk_es_admin.TabIndex = 10;
+            this.Chk_es_admin.Text = "Administrador";
+            this.Chk_es_admin.UseVisualStyleBackColor = true;
+            // 
+            // Txt_cargo_us
+            // 
+            this.Txt_cargo_us.Location = new System.Drawing.Point(99, 108);
+            this.Txt_cargo_us.MaxLength = 50;
+            this.Txt_cargo_us.Name = "Txt_cargo_us";
+            this.Txt_cargo_us.ReadOnly = true;
+            this.Txt_cargo_us.Size = new System.Drawing.Size(155, 20);
+            this.Txt_cargo_us.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(52, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Cargo: ";
+            // 
+            // Txt_nombres_us
+            // 
+            this.Txt_nombres_us.Location = new System.Drawing.Point(99, 82);
+            this.Txt_nombres_us.MaxLength = 100;
+            this.Txt_nombres_us.Name = "Txt_nombres_us";
+            this.Txt_nombres_us.ReadOnly = true;
+            this.Txt_nombres_us.Size = new System.Drawing.Size(216, 20);
+            this.Txt_nombres_us.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Nombres: (*)";
+            // 
+            // Txt_login_us
+            // 
+            this.Txt_login_us.Location = new System.Drawing.Point(99, 30);
+            this.Txt_login_us.MaxLength = 20;
+            this.Txt_login_us.Name = "Txt_login_us";
+            this.Txt_login_us.ReadOnly = true;
+            this.Txt_login_us.Size = new System.Drawing.Size(122, 20);
+            this.Txt_login_us.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Login: (*)";
+            // 
             // Btn_retornar
             // 
             this.Btn_retornar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.Btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar.ForeColor = System.Drawing.Color.White;
-            this.Btn_retornar.Location = new System.Drawing.Point(283, 106);
+            this.Btn_retornar.Location = new System.Drawing.Point(283, 185);
             this.Btn_retornar.Name = "Btn_retornar";
             this.Btn_retornar.Size = new System.Drawing.Size(76, 26);
-            this.Btn_retornar.TabIndex = 4;
+            this.Btn_retornar.TabIndex = 5;
             this.Btn_retornar.Text = "Retornar";
             this.Btn_retornar.UseVisualStyleBackColor = false;
             this.Btn_retornar.Visible = false;
@@ -173,10 +251,10 @@
             this.Btn_guardar.BackColor = System.Drawing.Color.SteelBlue;
             this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.Btn_guardar.Location = new System.Drawing.Point(202, 106);
+            this.Btn_guardar.Location = new System.Drawing.Point(202, 185);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(76, 26);
-            this.Btn_guardar.TabIndex = 3;
+            this.Btn_guardar.TabIndex = 4;
             this.Btn_guardar.Text = "Guardar";
             this.Btn_guardar.UseVisualStyleBackColor = false;
             this.Btn_guardar.Visible = false;
@@ -187,32 +265,32 @@
             this.Btn_cancelar.BackColor = System.Drawing.Color.LightCoral;
             this.Btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.Btn_cancelar.Location = new System.Drawing.Point(121, 106);
+            this.Btn_cancelar.Location = new System.Drawing.Point(121, 185);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(76, 26);
-            this.Btn_cancelar.TabIndex = 2;
+            this.Btn_cancelar.TabIndex = 3;
             this.Btn_cancelar.Text = "Cancelar";
             this.Btn_cancelar.UseVisualStyleBackColor = false;
             this.Btn_cancelar.Visible = false;
             this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
-            // Txt_descripcion_ru
+            // Txt_password_us
             // 
-            this.Txt_descripcion_ru.Location = new System.Drawing.Point(103, 71);
-            this.Txt_descripcion_ru.MaxLength = 60;
-            this.Txt_descripcion_ru.Name = "Txt_descripcion_ru";
-            this.Txt_descripcion_ru.ReadOnly = true;
-            this.Txt_descripcion_ru.Size = new System.Drawing.Size(212, 20);
-            this.Txt_descripcion_ru.TabIndex = 1;
+            this.Txt_password_us.Location = new System.Drawing.Point(99, 56);
+            this.Txt_password_us.MaxLength = 20;
+            this.Txt_password_us.Name = "Txt_password_us";
+            this.Txt_password_us.ReadOnly = true;
+            this.Txt_password_us.Size = new System.Drawing.Size(122, 20);
+            this.Txt_password_us.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 74);
+            this.label1.Location = new System.Drawing.Point(24, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Rubro: (*)";
+            this.label1.Text = "Password: (*)";
             // 
             // Btn_nuevo
             // 
@@ -220,7 +298,7 @@
             this.Btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_nuevo.ImageKey = "nuevo.png";
             this.Btn_nuevo.ImageList = this.imageList1;
-            this.Btn_nuevo.Location = new System.Drawing.Point(25, 318);
+            this.Btn_nuevo.Location = new System.Drawing.Point(25, 317);
             this.Btn_nuevo.Name = "Btn_nuevo";
             this.Btn_nuevo.Size = new System.Drawing.Size(72, 58);
             this.Btn_nuevo.TabIndex = 1;
@@ -245,7 +323,7 @@
             this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar.ImageKey = "actualizar.png";
             this.Btn_actualizar.ImageList = this.imageList1;
-            this.Btn_actualizar.Location = new System.Drawing.Point(103, 318);
+            this.Btn_actualizar.Location = new System.Drawing.Point(103, 317);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(72, 58);
             this.Btn_actualizar.TabIndex = 2;
@@ -260,7 +338,7 @@
             this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_eliminar.ImageKey = "eliminar.png";
             this.Btn_eliminar.ImageList = this.imageList1;
-            this.Btn_eliminar.Location = new System.Drawing.Point(181, 318);
+            this.Btn_eliminar.Location = new System.Drawing.Point(181, 317);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(72, 58);
             this.Btn_eliminar.TabIndex = 3;
@@ -275,7 +353,7 @@
             this.Btn_reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_reporte.ImageKey = "report.png";
             this.Btn_reporte.ImageList = this.imageList1;
-            this.Btn_reporte.Location = new System.Drawing.Point(259, 318);
+            this.Btn_reporte.Location = new System.Drawing.Point(259, 317);
             this.Btn_reporte.Name = "Btn_reporte";
             this.Btn_reporte.Size = new System.Drawing.Size(72, 58);
             this.Btn_reporte.TabIndex = 4;
@@ -290,7 +368,7 @@
             this.Btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_salir.ImageKey = "salir.png";
             this.Btn_salir.ImageList = this.imageList1;
-            this.Btn_salir.Location = new System.Drawing.Point(337, 318);
+            this.Btn_salir.Location = new System.Drawing.Point(337, 317);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(72, 58);
             this.Btn_salir.TabIndex = 5;
@@ -316,16 +394,16 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(3, 6);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 18);
+            this.label16.Size = new System.Drawing.Size(103, 18);
             this.label16.TabIndex = 0;
-            this.label16.Text = "RUBROS";
+            this.label16.Text = "USUARIOS";
             // 
-            // Frm_Rubros
+            // Frm_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 421);
+            this.ClientSize = new System.Drawing.Size(784, 397);
             this.Controls.Add(this.Pnl_titulo_form);
             this.Controls.Add(this.Btn_salir);
             this.Controls.Add(this.Btn_reporte);
@@ -333,9 +411,9 @@
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_nuevo);
             this.Controls.Add(this.Tbc_principal);
-            this.Name = "Frm_Rubros";
-            this.Text = "RUBROS";
-            this.Load += new System.EventHandler(this.Frm_Rubros_Load);
+            this.Name = "Frm_Usuarios";
+            this.Text = "USUARIOS";
+            this.Load += new System.EventHandler(this.Frm_Usuarios_Load);
             this.Tbc_principal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -364,11 +442,18 @@
         private System.Windows.Forms.Button Btn_salir;
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_cancelar;
-        private System.Windows.Forms.TextBox Txt_descripcion_ru;
+        private System.Windows.Forms.TextBox Txt_password_us;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_retornar;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.TextBox Txt_login_us;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel Pnl_titulo_form;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox Chk_es_admin;
+        private System.Windows.Forms.TextBox Txt_cargo_us;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Txt_nombres_us;
+        private System.Windows.Forms.Label label4;
     }
 }

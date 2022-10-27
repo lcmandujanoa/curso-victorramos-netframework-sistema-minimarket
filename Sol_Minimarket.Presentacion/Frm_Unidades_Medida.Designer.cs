@@ -52,17 +52,20 @@
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_reporte = new System.Windows.Forms.Button();
             this.Btn_salir = new System.Windows.Forms.Button();
+            this.Pnl_titulo_form = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.Tbc_principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.Pnl_titulo_form.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tbc_principal
             // 
             this.Tbc_principal.Controls.Add(this.tabPage1);
             this.Tbc_principal.Controls.Add(this.tabPage2);
-            this.Tbc_principal.Location = new System.Drawing.Point(12, 12);
+            this.Tbc_principal.Location = new System.Drawing.Point(12, 46);
             this.Tbc_principal.Name = "Tbc_principal";
             this.Tbc_principal.SelectedIndex = 0;
             this.Tbc_principal.Size = new System.Drawing.Size(740, 260);
@@ -239,7 +242,7 @@
             this.Btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_nuevo.ImageKey = "nuevo.png";
             this.Btn_nuevo.ImageList = this.imageList1;
-            this.Btn_nuevo.Location = new System.Drawing.Point(25, 283);
+            this.Btn_nuevo.Location = new System.Drawing.Point(25, 313);
             this.Btn_nuevo.Name = "Btn_nuevo";
             this.Btn_nuevo.Size = new System.Drawing.Size(72, 58);
             this.Btn_nuevo.TabIndex = 1;
@@ -264,7 +267,7 @@
             this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar.ImageKey = "actualizar.png";
             this.Btn_actualizar.ImageList = this.imageList1;
-            this.Btn_actualizar.Location = new System.Drawing.Point(103, 283);
+            this.Btn_actualizar.Location = new System.Drawing.Point(103, 317);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(72, 58);
             this.Btn_actualizar.TabIndex = 2;
@@ -279,7 +282,7 @@
             this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_eliminar.ImageKey = "eliminar.png";
             this.Btn_eliminar.ImageList = this.imageList1;
-            this.Btn_eliminar.Location = new System.Drawing.Point(181, 283);
+            this.Btn_eliminar.Location = new System.Drawing.Point(181, 317);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(72, 58);
             this.Btn_eliminar.TabIndex = 3;
@@ -294,7 +297,7 @@
             this.Btn_reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_reporte.ImageKey = "report.png";
             this.Btn_reporte.ImageList = this.imageList1;
-            this.Btn_reporte.Location = new System.Drawing.Point(259, 283);
+            this.Btn_reporte.Location = new System.Drawing.Point(259, 317);
             this.Btn_reporte.Name = "Btn_reporte";
             this.Btn_reporte.Size = new System.Drawing.Size(72, 58);
             this.Btn_reporte.TabIndex = 4;
@@ -309,7 +312,7 @@
             this.Btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_salir.ImageKey = "salir.png";
             this.Btn_salir.ImageList = this.imageList1;
-            this.Btn_salir.Location = new System.Drawing.Point(337, 283);
+            this.Btn_salir.Location = new System.Drawing.Point(337, 317);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(72, 58);
             this.Btn_salir.TabIndex = 5;
@@ -318,12 +321,34 @@
             this.Btn_salir.UseVisualStyleBackColor = false;
             this.Btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
+            // Pnl_titulo_form
+            // 
+            this.Pnl_titulo_form.BackColor = System.Drawing.Color.Tomato;
+            this.Pnl_titulo_form.Controls.Add(this.label16);
+            this.Pnl_titulo_form.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_titulo_form.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_titulo_form.Name = "Pnl_titulo_form";
+            this.Pnl_titulo_form.Size = new System.Drawing.Size(784, 29);
+            this.Pnl_titulo_form.TabIndex = 8;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(3, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(219, 18);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "UNIDADES DE MEDIDAS";
+            // 
             // Frm_Unidades_Medida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(784, 397);
+            this.Controls.Add(this.Pnl_titulo_form);
             this.Controls.Add(this.Btn_salir);
             this.Controls.Add(this.Btn_reporte);
             this.Controls.Add(this.Btn_eliminar);
@@ -339,6 +364,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.Pnl_titulo_form.ResumeLayout(false);
+            this.Pnl_titulo_form.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -365,5 +392,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TextBox Txt_abreviatura_um;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel Pnl_titulo_form;
+        private System.Windows.Forms.Label label16;
     }
 }

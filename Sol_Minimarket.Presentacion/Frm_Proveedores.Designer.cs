@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Proveedores));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tbc_principal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
@@ -47,9 +47,16 @@
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Pnl_Listado_di = new System.Windows.Forms.Panel();
+            this.Btn_retornar4 = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.Btn_buscar4 = new System.Windows.Forms.Button();
+            this.Txt_buscar4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Dgv_distritos = new System.Windows.Forms.DataGridView();
             this.Pnl_Listado_ru = new System.Windows.Forms.Panel();
             this.Btn_retornar3 = new System.Windows.Forms.Button();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.Btn_buscar3 = new System.Windows.Forms.Button();
             this.Txt_buscar3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -103,35 +110,31 @@
             this.Btn_reporte = new System.Windows.Forms.Button();
             this.Btn_salir = new System.Windows.Forms.Button();
             this.usP_Listado_poTableAdapter1 = new Sol_Minimarket.Presentacion.Reportes.DataSet_MiniMarketTableAdapters.USP_Listado_poTableAdapter();
-            this.Pnl_Listado_di = new System.Windows.Forms.Panel();
-            this.Btn_retornar4 = new System.Windows.Forms.Button();
-            this.Btn_buscar4 = new System.Windows.Forms.Button();
-            this.Txt_buscar4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Dgv_distritos = new System.Windows.Forms.DataGridView();
+            this.Pnl_titulo_form = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.Tbc_principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.Pnl_Listado_di.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_distritos)).BeginInit();
             this.Pnl_Listado_ru.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rubros)).BeginInit();
             this.Pnl_Listado_sx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_sexos)).BeginInit();
             this.Pnl_Listado_tdpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_tipo_tdpc)).BeginInit();
-            this.Pnl_Listado_di.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_distritos)).BeginInit();
+            this.Pnl_titulo_form.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tbc_principal
             // 
             this.Tbc_principal.Controls.Add(this.tabPage1);
             this.Tbc_principal.Controls.Add(this.tabPage2);
-            this.Tbc_principal.Location = new System.Drawing.Point(12, 12);
+            this.Tbc_principal.Location = new System.Drawing.Point(12, 42);
             this.Tbc_principal.Name = "Tbc_principal";
             this.Tbc_principal.SelectedIndex = 0;
-            this.Tbc_principal.Size = new System.Drawing.Size(1053, 383);
+            this.Tbc_principal.Size = new System.Drawing.Size(1053, 339);
             this.Tbc_principal.TabIndex = 0;
             // 
             // tabPage1
@@ -143,7 +146,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1045, 357);
+            this.tabPage1.Size = new System.Drawing.Size(1045, 313);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -152,18 +155,18 @@
             // 
             this.Dgv_principal.AllowUserToAddRows = false;
             this.Dgv_principal.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Menu;
-            this.Dgv_principal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_principal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_principal.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.Dgv_principal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_principal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_principal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_principal.ColumnHeadersHeight = 35;
             this.Dgv_principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_principal.EnableHeadersVisualStyles = false;
@@ -251,6 +254,103 @@
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // Pnl_Listado_di
+            // 
+            this.Pnl_Listado_di.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(154)))));
+            this.Pnl_Listado_di.Controls.Add(this.Btn_retornar4);
+            this.Pnl_Listado_di.Controls.Add(this.Btn_buscar4);
+            this.Pnl_Listado_di.Controls.Add(this.Txt_buscar4);
+            this.Pnl_Listado_di.Controls.Add(this.label9);
+            this.Pnl_Listado_di.Controls.Add(this.label10);
+            this.Pnl_Listado_di.Controls.Add(this.Dgv_distritos);
+            this.Pnl_Listado_di.Location = new System.Drawing.Point(865, 10);
+            this.Pnl_Listado_di.Name = "Pnl_Listado_di";
+            this.Pnl_Listado_di.Size = new System.Drawing.Size(692, 220);
+            this.Pnl_Listado_di.TabIndex = 26;
+            this.Pnl_Listado_di.Visible = false;
+            // 
+            // Btn_retornar4
+            // 
+            this.Btn_retornar4.ImageKey = "retornar.png";
+            this.Btn_retornar4.ImageList = this.imageList2;
+            this.Btn_retornar4.Location = new System.Drawing.Point(250, 30);
+            this.Btn_retornar4.Name = "Btn_retornar4";
+            this.Btn_retornar4.Size = new System.Drawing.Size(30, 23);
+            this.Btn_retornar4.TabIndex = 24;
+            this.Btn_retornar4.UseVisualStyleBackColor = true;
+            this.Btn_retornar4.Click += new System.EventHandler(this.Btn_retornar4_Click);
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "lupa.png");
+            this.imageList2.Images.SetKeyName(1, "retornar.png");
+            // 
+            // Btn_buscar4
+            // 
+            this.Btn_buscar4.ImageKey = "lupa.png";
+            this.Btn_buscar4.ImageList = this.imageList2;
+            this.Btn_buscar4.Location = new System.Drawing.Point(214, 30);
+            this.Btn_buscar4.Name = "Btn_buscar4";
+            this.Btn_buscar4.Size = new System.Drawing.Size(30, 23);
+            this.Btn_buscar4.TabIndex = 19;
+            this.Btn_buscar4.UseVisualStyleBackColor = true;
+            this.Btn_buscar4.Click += new System.EventHandler(this.Btn_buscar4_Click);
+            // 
+            // Txt_buscar4
+            // 
+            this.Txt_buscar4.Location = new System.Drawing.Point(59, 30);
+            this.Txt_buscar4.Name = "Txt_buscar4";
+            this.Txt_buscar4.Size = new System.Drawing.Size(149, 20);
+            this.Txt_buscar4.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Buscar:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(152, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "LISTADO DE DISTRITOS";
+            // 
+            // Dgv_distritos
+            // 
+            this.Dgv_distritos.AllowUserToAddRows = false;
+            this.Dgv_distritos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_distritos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_distritos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.Dgv_distritos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_distritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.Dgv_distritos.ColumnHeadersHeight = 35;
+            this.Dgv_distritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgv_distritos.EnableHeadersVisualStyles = false;
+            this.Dgv_distritos.Location = new System.Drawing.Point(12, 58);
+            this.Dgv_distritos.Name = "Dgv_distritos";
+            this.Dgv_distritos.ReadOnly = true;
+            this.Dgv_distritos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Dgv_distritos.Size = new System.Drawing.Size(663, 146);
+            this.Dgv_distritos.TabIndex = 20;
+            this.Dgv_distritos.DoubleClick += new System.EventHandler(this.Dgv_distritos_DoubleClick);
+            // 
             // Pnl_Listado_ru
             // 
             this.Pnl_Listado_ru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(154)))));
@@ -276,13 +376,6 @@
             this.Btn_retornar3.TabIndex = 24;
             this.Btn_retornar3.UseVisualStyleBackColor = true;
             this.Btn_retornar3.Click += new System.EventHandler(this.Btn_retornar3_Click);
-            // 
-            // imageList2
-            // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "lupa.png");
-            this.imageList2.Images.SetKeyName(1, "retornar.png");
             // 
             // Btn_buscar3
             // 
@@ -325,18 +418,18 @@
             // 
             this.Dgv_rubros.AllowUserToAddRows = false;
             this.Dgv_rubros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Menu;
-            this.Dgv_rubros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_rubros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_rubros.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.Dgv_rubros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_rubros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_rubros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_rubros.ColumnHeadersHeight = 35;
             this.Dgv_rubros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_rubros.EnableHeadersVisualStyles = false;
@@ -385,18 +478,18 @@
             // 
             this.Dgv_sexos.AllowUserToAddRows = false;
             this.Dgv_sexos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Menu;
-            this.Dgv_sexos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_sexos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.Dgv_sexos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.Dgv_sexos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_sexos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_sexos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.Dgv_sexos.ColumnHeadersHeight = 35;
             this.Dgv_sexos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_sexos.EnableHeadersVisualStyles = false;
@@ -445,18 +538,18 @@
             // 
             this.Dgv_tipo_tdpc.AllowUserToAddRows = false;
             this.Dgv_tipo_tdpc.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Menu;
-            this.Dgv_tipo_tdpc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Menu;
+            this.Dgv_tipo_tdpc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.Dgv_tipo_tdpc.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.Dgv_tipo_tdpc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_tipo_tdpc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_tipo_tdpc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.Dgv_tipo_tdpc.ColumnHeadersHeight = 35;
             this.Dgv_tipo_tdpc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_tipo_tdpc.EnableHeadersVisualStyles = false;
@@ -873,95 +966,26 @@
             // 
             this.usP_Listado_poTableAdapter1.ClearBeforeFill = true;
             // 
-            // Pnl_Listado_di
+            // Pnl_titulo_form
             // 
-            this.Pnl_Listado_di.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(154)))));
-            this.Pnl_Listado_di.Controls.Add(this.Btn_retornar4);
-            this.Pnl_Listado_di.Controls.Add(this.Btn_buscar4);
-            this.Pnl_Listado_di.Controls.Add(this.Txt_buscar4);
-            this.Pnl_Listado_di.Controls.Add(this.label9);
-            this.Pnl_Listado_di.Controls.Add(this.label10);
-            this.Pnl_Listado_di.Controls.Add(this.Dgv_distritos);
-            this.Pnl_Listado_di.Location = new System.Drawing.Point(865, 10);
-            this.Pnl_Listado_di.Name = "Pnl_Listado_di";
-            this.Pnl_Listado_di.Size = new System.Drawing.Size(692, 220);
-            this.Pnl_Listado_di.TabIndex = 26;
-            this.Pnl_Listado_di.Visible = false;
+            this.Pnl_titulo_form.BackColor = System.Drawing.Color.Tomato;
+            this.Pnl_titulo_form.Controls.Add(this.label21);
+            this.Pnl_titulo_form.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_titulo_form.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_titulo_form.Name = "Pnl_titulo_form";
+            this.Pnl_titulo_form.Size = new System.Drawing.Size(1069, 29);
+            this.Pnl_titulo_form.TabIndex = 8;
             // 
-            // Btn_retornar4
+            // label21
             // 
-            this.Btn_retornar4.ImageKey = "retornar.png";
-            this.Btn_retornar4.ImageList = this.imageList2;
-            this.Btn_retornar4.Location = new System.Drawing.Point(250, 30);
-            this.Btn_retornar4.Name = "Btn_retornar4";
-            this.Btn_retornar4.Size = new System.Drawing.Size(30, 23);
-            this.Btn_retornar4.TabIndex = 24;
-            this.Btn_retornar4.UseVisualStyleBackColor = true;
-            this.Btn_retornar4.Click += new System.EventHandler(this.Btn_retornar4_Click);
-            // 
-            // Btn_buscar4
-            // 
-            this.Btn_buscar4.ImageKey = "lupa.png";
-            this.Btn_buscar4.ImageList = this.imageList2;
-            this.Btn_buscar4.Location = new System.Drawing.Point(214, 30);
-            this.Btn_buscar4.Name = "Btn_buscar4";
-            this.Btn_buscar4.Size = new System.Drawing.Size(30, 23);
-            this.Btn_buscar4.TabIndex = 19;
-            this.Btn_buscar4.UseVisualStyleBackColor = true;
-            this.Btn_buscar4.Click += new System.EventHandler(this.Btn_buscar4_Click);
-            // 
-            // Txt_buscar4
-            // 
-            this.Txt_buscar4.Location = new System.Drawing.Point(59, 30);
-            this.Txt_buscar4.Name = "Txt_buscar4";
-            this.Txt_buscar4.Size = new System.Drawing.Size(149, 20);
-            this.Txt_buscar4.TabIndex = 23;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 32);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Buscar:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "LISTADO DE DISTRITOS";
-            // 
-            // Dgv_distritos
-            // 
-            this.Dgv_distritos.AllowUserToAddRows = false;
-            this.Dgv_distritos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Menu;
-            this.Dgv_distritos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
-            this.Dgv_distritos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.Dgv_distritos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_distritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.Dgv_distritos.ColumnHeadersHeight = 35;
-            this.Dgv_distritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Dgv_distritos.EnableHeadersVisualStyles = false;
-            this.Dgv_distritos.Location = new System.Drawing.Point(12, 58);
-            this.Dgv_distritos.Name = "Dgv_distritos";
-            this.Dgv_distritos.ReadOnly = true;
-            this.Dgv_distritos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_distritos.Size = new System.Drawing.Size(663, 146);
-            this.Dgv_distritos.TabIndex = 20;
-            this.Dgv_distritos.DoubleClick += new System.EventHandler(this.Dgv_distritos_DoubleClick);
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(3, 6);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(143, 18);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "PROVEEDORES";
             // 
             // Frm_Proveedores
             // 
@@ -969,6 +993,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 471);
+            this.Controls.Add(this.Pnl_titulo_form);
             this.Controls.Add(this.Btn_salir);
             this.Controls.Add(this.Btn_reporte);
             this.Controls.Add(this.Btn_eliminar);
@@ -984,6 +1009,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.Pnl_Listado_di.ResumeLayout(false);
+            this.Pnl_Listado_di.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_distritos)).EndInit();
             this.Pnl_Listado_ru.ResumeLayout(false);
             this.Pnl_Listado_ru.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rubros)).EndInit();
@@ -993,9 +1021,8 @@
             this.Pnl_Listado_tdpc.ResumeLayout(false);
             this.Pnl_Listado_tdpc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_tipo_tdpc)).EndInit();
-            this.Pnl_Listado_di.ResumeLayout(false);
-            this.Pnl_Listado_di.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_distritos)).EndInit();
+            this.Pnl_titulo_form.ResumeLayout(false);
+            this.Pnl_titulo_form.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1072,5 +1099,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView Dgv_distritos;
+        private System.Windows.Forms.Panel Pnl_titulo_form;
+        private System.Windows.Forms.Label label21;
     }
 }

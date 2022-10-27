@@ -55,6 +55,7 @@
     <Compile Include="D_Rubros.cs" />
     <Compile Include="D_Salida_Productos.cs" />
     <Compile Include="D_Unidades_Medida.cs" />
+    <Compile Include="D_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

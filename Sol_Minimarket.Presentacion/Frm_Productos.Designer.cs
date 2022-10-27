@@ -47,6 +47,8 @@
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Txt_pu_venta = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.Gbx_detalle = new System.Windows.Forms.GroupBox();
             this.Dgv_Stock_actual = new System.Windows.Forms.DataGridView();
             this.Pnl_Listado_ca = new System.Windows.Forms.Panel();
@@ -95,8 +97,8 @@
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_reporte = new System.Windows.Forms.Button();
             this.Btn_salir = new System.Windows.Forms.Button();
-            this.Txt_pu_venta = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.Pnl_titulo_form = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.Tbc_principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
@@ -109,16 +111,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_medidas)).BeginInit();
             this.Pnl_Listado_ma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_marcas)).BeginInit();
+            this.Pnl_titulo_form.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tbc_principal
             // 
             this.Tbc_principal.Controls.Add(this.tabPage1);
             this.Tbc_principal.Controls.Add(this.tabPage2);
-            this.Tbc_principal.Location = new System.Drawing.Point(12, 12);
+            this.Tbc_principal.Location = new System.Drawing.Point(12, 45);
             this.Tbc_principal.Name = "Tbc_principal";
             this.Tbc_principal.SelectedIndex = 0;
-            this.Tbc_principal.Size = new System.Drawing.Size(1053, 360);
+            this.Tbc_principal.Size = new System.Drawing.Size(1053, 324);
             this.Tbc_principal.TabIndex = 0;
             // 
             // tabPage1
@@ -130,7 +133,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1045, 334);
+            this.tabPage1.Size = new System.Drawing.Size(1045, 298);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -158,7 +161,7 @@
             this.Dgv_principal.Name = "Dgv_principal";
             this.Dgv_principal.ReadOnly = true;
             this.Dgv_principal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Dgv_principal.Size = new System.Drawing.Size(1031, 264);
+            this.Dgv_principal.Size = new System.Drawing.Size(1031, 248);
             this.Dgv_principal.TabIndex = 7;
             this.Dgv_principal.DoubleClick += new System.EventHandler(this.Dgv_principal_DoubleClick);
             // 
@@ -224,6 +227,23 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Txt_pu_venta
+            // 
+            this.Txt_pu_venta.Location = new System.Drawing.Point(83, 214);
+            this.Txt_pu_venta.Name = "Txt_pu_venta";
+            this.Txt_pu_venta.ReadOnly = true;
+            this.Txt_pu_venta.Size = new System.Drawing.Size(86, 20);
+            this.Txt_pu_venta.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(2, 217);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "P.U. Venta: (*)";
             // 
             // Gbx_detalle
             // 
@@ -803,22 +823,26 @@
             this.Btn_salir.UseVisualStyleBackColor = false;
             this.Btn_salir.Click += new System.EventHandler(this.Btn_salir_Click);
             // 
-            // Txt_pu_venta
+            // Pnl_titulo_form
             // 
-            this.Txt_pu_venta.Location = new System.Drawing.Point(83, 214);
-            this.Txt_pu_venta.Name = "Txt_pu_venta";
-            this.Txt_pu_venta.ReadOnly = true;
-            this.Txt_pu_venta.Size = new System.Drawing.Size(86, 20);
-            this.Txt_pu_venta.TabIndex = 7;
+            this.Pnl_titulo_form.BackColor = System.Drawing.Color.Tomato;
+            this.Pnl_titulo_form.Controls.Add(this.label16);
+            this.Pnl_titulo_form.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_titulo_form.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_titulo_form.Name = "Pnl_titulo_form";
+            this.Pnl_titulo_form.Size = new System.Drawing.Size(1069, 29);
+            this.Pnl_titulo_form.TabIndex = 8;
             // 
-            // label14
+            // label16
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(2, 217);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 13);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "P.U. Venta: (*)";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(3, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(122, 18);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "PRODUCTOS";
             // 
             // Frm_Productos
             // 
@@ -826,6 +850,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 460);
+            this.Controls.Add(this.Pnl_titulo_form);
             this.Controls.Add(this.Btn_salir);
             this.Controls.Add(this.Btn_reporte);
             this.Controls.Add(this.Btn_eliminar);
@@ -852,6 +877,8 @@
             this.Pnl_Listado_ma.ResumeLayout(false);
             this.Pnl_Listado_ma.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_marcas)).EndInit();
+            this.Pnl_titulo_form.ResumeLayout(false);
+            this.Pnl_titulo_form.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -915,5 +942,7 @@
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.TextBox Txt_pu_venta;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel Pnl_titulo_form;
+        private System.Windows.Forms.Label label16;
     }
 }

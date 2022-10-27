@@ -110,6 +110,8 @@
             this.Btn_reporte = new System.Windows.Forms.Button();
             this.Btn_salir = new System.Windows.Forms.Button();
             this.usP_Listado_poTableAdapter1 = new Sol_Minimarket.Presentacion.Reportes.DataSet_MiniMarketTableAdapters.USP_Listado_poTableAdapter();
+            this.Pnl_titulo_form = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.Tbc_principal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
@@ -122,16 +124,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_sexos)).BeginInit();
             this.Pnl_Listado_tdpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_tipo_tdpc)).BeginInit();
+            this.Pnl_titulo_form.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tbc_principal
             // 
             this.Tbc_principal.Controls.Add(this.tabPage1);
             this.Tbc_principal.Controls.Add(this.tabPage2);
-            this.Tbc_principal.Location = new System.Drawing.Point(12, 12);
+            this.Tbc_principal.Location = new System.Drawing.Point(12, 42);
             this.Tbc_principal.Name = "Tbc_principal";
             this.Tbc_principal.SelectedIndex = 0;
-            this.Tbc_principal.Size = new System.Drawing.Size(1053, 383);
+            this.Tbc_principal.Size = new System.Drawing.Size(1053, 347);
             this.Tbc_principal.TabIndex = 0;
             // 
             // tabPage1
@@ -143,7 +146,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1045, 357);
+            this.tabPage1.Size = new System.Drawing.Size(1045, 321);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -963,12 +966,34 @@
             // 
             this.usP_Listado_poTableAdapter1.ClearBeforeFill = true;
             // 
+            // Pnl_titulo_form
+            // 
+            this.Pnl_titulo_form.BackColor = System.Drawing.Color.Tomato;
+            this.Pnl_titulo_form.Controls.Add(this.label21);
+            this.Pnl_titulo_form.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_titulo_form.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_titulo_form.Name = "Pnl_titulo_form";
+            this.Pnl_titulo_form.Size = new System.Drawing.Size(1069, 29);
+            this.Pnl_titulo_form.TabIndex = 8;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(3, 6);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(96, 18);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "CLIENTES";
+            // 
             // Frm_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 471);
+            this.Controls.Add(this.Pnl_titulo_form);
             this.Controls.Add(this.Btn_salir);
             this.Controls.Add(this.Btn_reporte);
             this.Controls.Add(this.Btn_eliminar);
@@ -996,6 +1021,8 @@
             this.Pnl_Listado_tdpc.ResumeLayout(false);
             this.Pnl_Listado_tdpc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_tipo_tdpc)).EndInit();
+            this.Pnl_titulo_form.ResumeLayout(false);
+            this.Pnl_titulo_form.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1072,5 +1099,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView Dgv_distritos;
+        private System.Windows.Forms.Panel Pnl_titulo_form;
+        private System.Windows.Forms.Label label21;
     }
 }
