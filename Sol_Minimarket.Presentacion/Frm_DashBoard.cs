@@ -179,5 +179,11 @@ namespace Sol_Minimarket.Presentacion
         {
             Close();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            Lbl_hora.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

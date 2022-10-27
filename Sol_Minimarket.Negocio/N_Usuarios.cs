@@ -28,5 +28,11 @@ namespace Sol_Minimarket.Negocio
             D_Usuarios Datos = new D_Usuarios();
             return Datos.Eliminar_us(Codigo_us);
         }
+
+        public static DataTable Login_us(string cLogin_us, string cPassword_us)
+        {
+            D_Usuarios Datos = new D_Usuarios();
+            return Datos.Login_us(cLogin_us, cPassword_us);
+        }
     }
 }

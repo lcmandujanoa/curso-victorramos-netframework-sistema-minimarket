@@ -53,18 +53,18 @@ namespace Sol_Minimarket.Presentacion
 
         private void Estado_Botonesprincipales(bool lEstado) 
         {
-            this.Btn_nuevo.Enabled = lEstado;
-            this.Btn_actualizar.Enabled = lEstado;
-            this.Btn_eliminar.Enabled = lEstado;
-            this.Btn_reporte.Enabled = lEstado;
-            this.Btn_salir.Enabled = lEstado;
+            Btn_nuevo.Enabled = lEstado;
+            Btn_actualizar.Enabled = lEstado;
+            Btn_eliminar.Enabled = lEstado;
+            Btn_reporte.Enabled = lEstado;
+            Btn_salir.Enabled = lEstado;
         }
 
         private void Estado_Botonesprocesos(bool lEstado)
         {
-            this.Btn_cancelar.Visible = lEstado;
-            this.Btn_guardar.Visible = lEstado;
-            this.Btn_retornar.Visible = !lEstado;
+            Btn_cancelar.Visible = lEstado;
+            Btn_guardar.Visible = lEstado;
+            Btn_retornar.Visible = !lEstado;
         }
 
         private void Selecciona_item()
@@ -88,57 +88,63 @@ namespace Sol_Minimarket.Presentacion
 
         private void Frm_Usuarios_Load(object sender, EventArgs e)
         {
-            this.Listado_us("%");
+            Listado_us("%");
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            if (Txt_login_us.Text == string.Empty || 
-                Txt_password_us.Text == string.Empty ||
-                Txt_nombres_us.Text == string.Empty)
+            if (Txt_password_us.Text == string.Empty && Estadoguarda == 1)
             {
                 MessageBox.Show("Falta ingresar datos requeridos (*)", "Aviso del Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else //Se procedería a ingresar la información
+            else
             {
-                E_Usuarios oUs = new E_Usuarios();
-                string Rpta = "";
-                oUs.Codigo_us = Codigo_us;
-                oUs.Login_us = Txt_login_us.Text.Trim();
-                oUs.Password_us = Txt_password_us.Text.Trim();
-                oUs.Nombres_us = Txt_nombres_us.Text.Trim();
-                oUs.Cargo_us = Txt_cargo_us.Text.Trim();
-                oUs.Es_admin = Chk_es_admin.Checked;
-
-                Rpta = N_Usuarios.Guardar_us(Estadoguarda, oUs);
-                if (Rpta == "OK")
+                if (Txt_login_us.Text == string.Empty || Txt_nombres_us.Text == string.Empty)
                 {
-                    Listado_us("%");
-                    MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Estadoguarda = 0; //Sin ninguna acción
-                    Estado_Botonesprincipales(true);
-                    Estado_Botonesprocesos(false);
-
-                    Txt_login_us.Text = "";
-                    Txt_password_us.Text = "";
-                    Txt_nombres_us.Text = "";
-                    Txt_cargo_us.Text = "";
-                    Chk_es_admin.Checked = false;
-
-                    Txt_login_us.ReadOnly = true;
-                    Txt_password_us.ReadOnly = true;
-                    Txt_nombres_us.ReadOnly = true;
-                    Txt_cargo_us.ReadOnly = true;
-                    Chk_es_admin.Enabled = false;
-
-                    Tbc_principal.SelectedIndex = 0;
-                    Codigo_us = 0;
+                    MessageBox.Show("Falta ingresar datos requeridos (*)", "Aviso del Sistema",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                else //Se procedería a ingresar la información
                 {
-                    MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    E_Usuarios oUs = new E_Usuarios();
+                    string Rpta = "";
+                    oUs.Codigo_us = Codigo_us;
+                    oUs.Login_us = Txt_login_us.Text.Trim();
+                    oUs.Password_us = Txt_password_us.Text.Trim();
+                    oUs.Nombres_us = Txt_nombres_us.Text.Trim();
+                    oUs.Cargo_us = Txt_cargo_us.Text.Trim();
+                    oUs.Es_admin = Chk_es_admin.Checked;
+
+                    Rpta = N_Usuarios.Guardar_us(Estadoguarda, oUs);
+                    if (Rpta == "OK")
+                    {
+                        Listado_us("%");
+                        MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Estadoguarda = 0; //Sin ninguna acción
+                        Estado_Botonesprincipales(true);
+                        Estado_Botonesprocesos(false);
+
+                        Txt_login_us.Text = "";
+                        Txt_password_us.Text = "";
+                        Txt_nombres_us.Text = "";
+                        Txt_cargo_us.Text = "";
+                        Chk_es_admin.Checked = false;
+
+                        Txt_login_us.ReadOnly = true;
+                        Txt_password_us.ReadOnly = true;
+                        Txt_nombres_us.ReadOnly = true;
+                        Txt_cargo_us.ReadOnly = true;
+                        Chk_es_admin.Enabled = false;
+
+                        Tbc_principal.SelectedIndex = 0;
+                        Codigo_us = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

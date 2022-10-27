@@ -91,5 +91,33 @@ namespace Sol_Minimarket.Datos
             }
             return Rpta;
         }
+
+        public DataTable Login_us(string cLogin_us, string cPassword_us)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SQLCon = new SqlConnection();
+
+            try
+            {
+                SQLCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("USP_Login_us", SQLCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@cLogin_us", SqlDbType.VarChar).Value = cLogin_us;
+                Comando.Parameters.Add("@cPassword_us", SqlDbType.VarChar).Value = cPassword_us;
+                SQLCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
+            }
+        }
     }
 }
